@@ -51,3 +51,13 @@ function loadTimeLine() {
     document.getElementById('timeLinePagination').innerHTML = item;
   });
 }
+
+window.randomdFunFacts = function() {
+  axios.get('./json/funfacts.json')
+  .then(function(response){
+    var obj = (response.data);
+    var id = Math.floor((Math.random() * obj.length) + 1);
+    var facts = obj[id].fact;
+    document.getElementById('funFacts').innerHTML = facts;
+  }) 
+}

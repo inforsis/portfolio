@@ -438,7 +438,7 @@
 
     </main>
 
-    <input type="checkbox" autocomplete="off" class="func-facts-check" id="checkFunFacts">    
+    <input type="checkbox" autocomplete="off" onchange="randomdFunFacts()" class="func-facts-check" id="checkFunFacts">    
     <label class="fun-facts-card animated" for="checkFunFacts" title="Click to close">
         
         <div class="content">
@@ -449,8 +449,8 @@
                 some fun fact about me #<span>1</span>
             </h6>
             
-            <p>
-                I don't know cooking, but I just like do it.
+            <p id="funFacts">
+                
             </p>
 
         </div><!--.content-->
