@@ -1,0 +1,55 @@
+.timeline-pagination {
+	padding: 0 50px;
+	display: flex;
+	flex-direction: column;
+	.item {
+		padding: 15px 0 15px 15px;
+		color: $secundary-link-color;
+		position: relative;
+		border-left: 2px $secundary-link-color solid;
+		&:hover {
+			cursor:pointer;
+		}
+		>.bullet {
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			background-color: $secundary-link-color;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -6px;
+			margin: auto;
+			display: none;
+		}
+		>input[type="radio"] {
+			display: none;
+			&:checked {
+				+.bullet {
+					display:block;
+				}
+			}
+		}
+	}
+}
+.timeline-information {
+	width: 420px;
+	//height: 180px;
+	height: auto;
+	max-height: 100%;
+	padding-left: 60px;
+	border-left: 2px $secundary-link-color solid;
+	text-align: right;
+	>.year {
+		font-size: 1.8rem;
+		font-family: $primary-font-light-ex-italic;
+		color:$secundary-link-color;
+		margin-bottom: 15px;
+	}
+	>.item {
+		line-height: 1.4rem;
+		font-size: 0.9rem;
+    	font-family: $primary-font-light-italic;
+    	margin-bottom: 30px;
+	}
+}

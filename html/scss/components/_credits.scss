@@ -1,0 +1,12 @@
+.credits {
+	font-size: 9px;
+	font-family: $primary-font-regular;
+	position: absolute;
+	bottom: 0;
+	padding: 5px;
+	text-align: center;
+	>.material-icons {
+		font-size: 10px;
+		color:$secundary-link-color; 
+	}
+}

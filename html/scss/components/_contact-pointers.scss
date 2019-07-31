@@ -1,0 +1,21 @@
+.contact-pointers {
+	position: absolute;
+	bottom: 30px;
+	z-index: 1;
+	display: flex;
+	width: 100%;
+	>.item {
+		text-align: center;
+		flex-grow: 1;
+		>.material-icons {
+			color: $primary-light-color;
+    		display: block;
+    		font-size: 2rem;
+		}
+		>.title {
+			color: $primary-light-color;
+			font-size: 0.8rem;
+			font-family: $primary-font-light;
+		}
+	}
+}

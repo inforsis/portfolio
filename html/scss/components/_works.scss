@@ -1,0 +1,90 @@
+.works {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: calc(100% - 60px); 
+	width: 100%;
+	.item {
+		display: flex;
+		padding: 60px 120px 120px;
+		.container {
+			display: flex;
+			.thumb {
+				width: 60%; 
+				margin-right: 60px;
+				position: relative;
+				>img {
+					display: block;
+					height: auto;
+					position: absolute;
+					&.web {
+						width: 100%;
+						bottom: 0;
+						~.mobile {
+							left: 0;
+							z-index: 2;
+							bottom: -10px;
+							width: 60px;
+						}
+						~.tablet {
+							left: 15px;
+    						bottom: 0;
+    						width: 100px
+						}
+					}
+					&.mobile,
+					&.tablet {
+						z-index: 1;
+						height: auto;
+					}
+					&.mobile {
+						margin: 0 auto;
+					}
+					&.tablet {
+						
+					}
+				}
+			}
+			>.content {
+				.title {
+					font-size: 26px;
+					font-family:$main-font-bold; 
+					color:$primary-dark-color;
+					margin-bottom: $mg-bottom-works;
+					display: block;
+				}
+				.description {
+					font-size: 16px;
+					line-height: 26px;
+					font-family: $primary-font-light;
+					color: $primary-dark-color;
+					margin-bottom: $mg-bottom-works;
+					display: block;
+				}
+				.listing {
+					margin-bottom: $mg-bottom-works;
+					>.item {
+						background-color: $secundary-link-color;
+						display: inline-block;
+						margin-right: 15px;
+						padding: 2px 15px;
+						font-family: $primary-font-ex-light;
+						color:$side-bg;
+						font-size: 11px;
+						text-transform: uppercase;
+						letter-spacing: 1px;
+					}
+				}
+			}
+		}
+		&:nth-child(even) {
+			.thumb {
+				order: 2;
+				margin-right: 0;
+			}
+			.content {
+				order: 1;
+				margin-right: 60px;
+			}
+		}
+	}
+}

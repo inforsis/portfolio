@@ -1,0 +1,42 @@
+// ==========================================================================
+//   VARIAVEIS
+//===========================================================================
+//@import '../../node_modules/bootstrap/scss/variables';
+
+//fonts
+$primary-font-regular: 'ibm_plex_sansregular';
+$primary-font-ex-light: 'ibm_plex_sansextralight';
+$primary-font-light: 'ibm_plex_sanslight';
+$primary-font-light-italic: 'ibm_plex_sanslight_italic';
+$primary-font-light-ex-italic: 'ibm_plex_sansXLtIt';
+$primary-font-bold: 'ibm_plex_sansbold';
+
+$main-font-regular: 'titillium_webregular';
+$main-font-bold: 'titillium_webbold';
+
+//colors
+$primary-link-color: #0098ff;
+$secundary-link-color: #ff4f4f;
+$primary-dark-color: #112C30;
+$primary-color: #ff4f4f;
+$secundary-color: #0098ff;
+$primary-light-color: #f8f8f8;
+$success-color: #3ed223;
+
+//dimensions
+$height-main-menu-item: 50px;
+
+
+//side
+$side-bg: #fff;
+$side-width: 60px;
+
+//margin
+$mg-bottom-works: 15px;
+
+//positions
+$pdFieldTxt: 20px;
+
+//ui
+$fontSizeField: 18px;
+$lineHeightFIeld: $fontSizeField;

@@ -1,0 +1,59 @@
+//===========================================================================
+//	BASE/ELEMENTS
+//
+//		Essa camada serve para estilizarmos a parte mais básica dos
+//		componentes. Nada de IDs nem classes aqui, apenas seletores de
+//		elementos.
+//
+//			- Aqui definimos a aparência de <a>, <blockquote>, <ul>,
+//			<h1> e todos os outros elementos HTML desejados.
+//
+//			- lembre-se são estilizações BÁSICAS, nada de estilizar
+//			tudo aqui!
+//
+//			- aqui ficarão estilos para os headings h1-h6, blockquotes,
+//			a, buttons, etc;
+//===========================================================================
+html {
+	font-size: 17px;
+}
+body {
+	height: 100%;
+	background-color: #f8f8f8;
+	font-family: $primary-font-regular;
+	display: flex;
+	transition: all 0.5s ease;
+	margin: 0;
+	::-moz-selection {
+        background-color:$secundary-link-color;
+        color:$primary-light-color;
+    }
+    ::selection {
+        background-color:$secundary-link-color;
+        color:$primary-light-color;
+    }
+}
+a {
+	color: $secundary-link-color;
+}
+figure {
+	margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	line-height: inherit;
+}
+fieldset {
+
+}
+form {
+
+}
+input {
+	
+}

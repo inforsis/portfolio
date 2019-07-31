@@ -1,0 +1,51 @@
+.fun-facts-icon {
+	position: absolute;
+	z-index: 1;
+	bottom: 0.5rem;
+	right: 0.5rem;
+	&:after {
+		content: attr(data-title);
+		right: 100%;
+		padding-right: 0.25rem;
+		font-size: 1.2rem;
+		font-size: 0.65rem;
+		top: 0.15rem;
+		text-transform: uppercase;
+		white-space: nowrap;
+		position: absolute;
+		display: none;
+		font-family:$primary-font-ex-light; 
+	}
+	&:before {
+		font-family: 'Material Icons';
+		font-size: 1.2rem;
+		content: 'sentiment_satisfied';
+		transition: all 0.5s ease;
+	}
+	&:hover {
+		animation-play-state: paused !important;
+		cursor: pointer;
+		&:before {
+			font-size: 1.2rem !important;
+		}
+		&:after {
+			display:block;
+		}
+	}
+	&.new,
+	&:hover {
+		&:before {
+			content: 'mood';
+		}
+	}
+	&.new {
+		@extend .animated;
+		@extend .heartBeat;
+		animation-iteration-count: infinite;
+		animation-duration: 3s;
+		animation-delay: 5s;
+		&:before {
+			font-size: 1.5rem;
+		}
+	}
+}
