@@ -1,5 +1,38 @@
 [
     {
+        "title": "Maker Factory",
+        "description": "Front End development, HTML, CSS with responsive.",
+        "link": "http://makerfactory.com.br",
+        "thumbnails": [{
+                        "web":  "./img/work/makerfactory_web.png",
+                        "mobile": "./img/work/makerfactory_mobile.png",
+                        "tablet": "./img/work/makerfactory_tablet.png"
+                    }],
+        "tags": [
+                    "freelancer",
+                    "CSS3",
+                    "HTML5",
+                    "Javascript"
+                ]
+    },
+    {
+        "title": "Lowndes Condomínios e Locações",
+        "description": "Front End development, HTML, CSS with responsive. Javascript (jquery and ajax) and Wordpress integration.",
+        "link": "http://makerfactory.com.br",
+        "thumbnails": [{
+                        "web":  "./img/work/lowndes_web.png",
+                        "mobile": "./img/work/lowndes_mobile.png",
+                        "tablet": "./img/work/lowndes_tablet.png"
+                    }],
+        "tags": [
+                    "freelancer",
+                    "wordpress",
+                    "CSS3",
+                    "HTML5",
+                    "PHP"
+                ]
+    },
+    {
         "title": "Pedro Bucher - Photography",
         "description": "Front End development, HTML, CSS with responsive. Javascript (jquery and ajax) and Wordpress integration.",
         "link": "http://pedrobucher.com",
@@ -47,39 +80,7 @@
                     "wordpress",
                     "CSS3",
                     "HTML5",
-                    "PHP"
-                ]
-    },
-    {
-        "title": "Maker Factory",
-        "description": "Front End development, HTML, CSS with responsive.",
-        "link": "http://makerfactory.com.br",
-        "thumbnails": [{
-                        "web":  "./img/work/makerfactory_web.png",
-                        "mobile": "./img/work/makerfactory_mobile.png",
-                        "tablet": "./img/work/makerfactory_tablet.png"
-                    }],
-        "tags": [
-                    "freelancer",
-                    "CSS3",
-                    "HTML5",
-                    "Javascript"
-                ]
-    },
-    {
-        "title": "Lowndes Condomínios e Locações",
-        "description": "Front End development, HTML, CSS with responsive. Javascript (jquery and ajax) and Wordpress integration.",
-        "link": "http://makerfactory.com.br",
-        "thumbnails": [{
-                        "web":  "./img/work/lowndes_web.png",
-                        "mobile": "./img/work/lowndes_mobile.png",
-                        "tablet": "./img/work/lowndes_tablet.png"
-                    }],
-        "tags": [
-                    "freelancer",
-                    "wordpress",
-                    "CSS3",
-                    "HTML5",
+                    "Design",
                     "PHP"
                 ]
     }
