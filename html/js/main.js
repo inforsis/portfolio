@@ -4,6 +4,7 @@ window.onload = function() {
   loadCountNumber();
   loadTimeLine();
   loadPortfolio();
+  loadBlogPosts();
 }
 
 window.changeTimeLine = function(elem,year) {
@@ -101,5 +102,22 @@ function loadPortfolio() {
               '</div><!--item-->';
     }
     document.getElementById('worksContent').innerHTML = item;
+  })
+}
+
+function loadBlogPosts() {
+  axios.get('./json/articles.json')
+  .then(function(response){
+    var obj = (response.data);
+    var posts = '';
+    for (var i = 0; i < obj.length; i++) {
+      posts += '<article class="article">'+
+                '<h2 class="title">'+
+                  '<a href="'+obj[i].link+'" class="link" title="'+obj[i].title+'">'+obj[i].title+'</a>'+
+                '</h2>'+
+                '<time class="date" datetime="2019-07-06">'+obj[i].date+'</time>'+
+              '</article><!--article-->';
+    }
+    document.getElementById('listingPosts').innerHTML = posts;
   })
 }
