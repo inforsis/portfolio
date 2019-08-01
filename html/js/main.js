@@ -3,6 +3,7 @@ import { CountUp } from './CountUp.min.js';
 window.onload = function() {
   loadCountNumber();
   loadTimeLine();
+  loadPortfolio();
 }
 
 window.changeTimeLine = function(elem,year) {
@@ -59,5 +60,46 @@ window.randomdFunFacts = function() {
     var id = Math.floor((Math.random() * obj.length) + 1);
     var facts = obj[id].fact;
     document.getElementById('funFacts').innerHTML = facts;
+    document.getElementById('funFactID').innerHTML = id;
   }) 
+}
+
+function loadPortfolio() {
+  axios.get('./json/portfolio.json')
+  .then(function(response){
+    var obj = (response.data);
+    var item = '';
+    for (var i=0;i<obj.length;i++) {
+      item += '<div class="item">'+
+                '<div class="container">'+
+                  '<figure class="thumb">';
+                    for (var k = 0; k < obj[i].thumbnails.length; k++) {
+                      item += '<img src="'+obj[i].thumbnails[k].web+'" class="web" alt="">'+
+                              '<img src="'+obj[i].thumbnails[k].mobile+'" class="mobile" alt="">'+
+                              '<img src="'+obj[i].thumbnails[k].tablet+'" class="tablet" alt="">';                      
+                    }
+                  item += '</figure>'+
+                  '<div class="content">'+
+                    '<h3 class="title">'+
+                        obj[i].title+
+                    '</h3>'+
+                    '<small class="description">'+
+                      obj[i].description+
+                    '</small>'+
+                    '<ul class="listing">';
+                      for (var j = 0; j < obj[i].tags.length; j++) {
+                        item += '<li class="item">'+
+                          obj[i].tags[j]+
+                         '</li>';
+                      }
+                    item += '</ul>';
+                    item += '<a href="'+obj[i].link+'?frm=jadson.dev" target="_blank">'+
+                      obj[i].link+
+                     '</a>'+
+                  '</div><!--content-->'+
+                '</div><!--container-->'+
+              '</div><!--item-->';
+    }
+    document.getElementById('worksContent').innerHTML = item;
+  })
 }
