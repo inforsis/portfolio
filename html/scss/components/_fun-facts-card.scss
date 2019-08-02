@@ -3,6 +3,7 @@
 	&:checked {
 		+.fun-facts-card {
 			display: flex;
+			pointer-events: initial;
 		}		
 	}
 }
@@ -16,6 +17,10 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 9998;
+	&.active {
+		pointer-events: none;
+		display: flex;
+	}
 	&:hover {
 		cursor: pointer;
 	}

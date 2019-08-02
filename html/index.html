@@ -323,21 +323,21 @@
                     <form action="" class="form">
                         
                         <fieldset class="fieldset">
-                            <input type="text" class="field-form field-text" autocomplete="off" maxlenght="40" required="required" title="Enter your name">
+                            <input type="text" id="emailName" class="field-form field-text" autocomplete="off" maxlenght="40" required="required" title="Enter your name">
                             <span class="field-placeholder">Your name</span>
                         </fieldset>
 
                         <fieldset class="fieldset">
-                            <input type="text" class="field-form field-text" autocomplete="off" maxlenght="60" required="required" title="Enter e-mail address">
+                            <input type="text" id="emailAddress" class="field-form field-text" autocomplete="off" maxlenght="60" required="required" title="Enter e-mail address">
                             <span class="field-placeholder">E-mail</span>
                         </fieldset>
 
                         <fieldset class="fieldset">
-                            <textarea class="field-form field-text textarea" autocomplete="off" required="required" title="Enter message"></textarea>
+                            <textarea class="field-form field-text textarea" id="emailMessage" autocomplete="off" required="required" title="Enter message"></textarea>
                             <span class="field-placeholder">Message</span>
                         </fieldset>
 
-                        <input type="submit" class="btn" value="Send" title="Click to send">
+                        <button type="button" id="btnSend" onclick="sendMail()" class="btn btn-send" title="Click to send"></button>
 
                     </form>
 
@@ -377,7 +377,7 @@
     </main>
 
     <input type="checkbox" autocomplete="off" onchange="randomdFunFacts()" class="func-facts-check" id="checkFunFacts">    
-    <label class="fun-facts-card animated" for="checkFunFacts" title="Click to close">
+    <label id="funFactsCard" class="fun-facts-card animated" for="checkFunFacts" title="Click to close">
         
         <div class="content">
 

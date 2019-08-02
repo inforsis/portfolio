@@ -4,4 +4,8 @@
 	line-height: $lineHeightFIeld;
 	margin: 0;
 	width: 100%;
+	&.disabled {
+		pointer-events: none;
+		opacity: 0.5;
+	}
 }

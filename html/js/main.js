@@ -1,4 +1,4 @@
-import { CountUp } from './CountUp.min.js';
+import { CountUp } from './countUp.min.js';
 
 window.onload = function() {
   loadCountNumber();
@@ -120,4 +120,47 @@ function loadBlogPosts() {
     }
     document.getElementById('listingPosts').innerHTML = posts;
   })
+}
+
+window.sendMail = function() {
+  var emailName =    document.getElementById('emailName');
+  var emailAddress = document.getElementById('emailAddress');
+  var emailMessage = document.getElementById('emailMessage');
+  
+  emailName.classList.add('disabled');
+  emailAddress.classList.add('disabled');
+  emailMessage.classList.add('disabled');
+  document.getElementById('btnSend').classList.add('sending');
+
+  showLoading();
+
+  axios.post('./methods/_mail.php', {
+    name:    emailName.value,
+    email:   emailAddress.value,
+    message: emailMessage.value
+  }).then(function(response){
+    var obj = (response.data);
+
+    emailName.value = '';
+    emailAddress.value = '';
+    emailMessage.value = '';
+
+  }).finally(function(response){
+
+    hideLoading();
+
+    emailName.classList.remove('disabled');
+    emailAddress.classList.remove('disabled');
+    emailMessage.classList.remove('disabled');
+    document.getElementById('btnSend').classList.remove('sending');
+  })
+}
+
+window.showLoading = function() {
+  randomdFunFacts();
+  document.getElementById('funFactsCard').classList.add('active');
+}
+
+window.hideLoading = function() {
+  document.getElementById('funFactsCard').classList.remove('active');
 }
