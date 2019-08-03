@@ -20,7 +20,11 @@
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
 	.credits {
 		width: 60px;
+		height: 35px;
+		z-index: 9;
 		right: 0;
-		bottom: initial;
+		top: 0;
+		margin: auto;
+		position: absolute;
 	}
 }

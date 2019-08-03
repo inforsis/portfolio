@@ -26,7 +26,7 @@
     $headers .= "$boundary\n";
     
     //envia o email sem anexo
-    if (mail($for,$subject,$mens,$headers)) {
+    if (($name && $email) && mail($for,$subject,$mens,$headers)) {
       //enviado
       //echo 'true';
       $return = array(

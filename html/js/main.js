@@ -123,6 +123,8 @@ function loadBlogPosts() {
 }
 
 window.sendMail = function() {
+  showLoading();
+ 
   var emailName =    document.getElementById('emailName');
   var emailAddress = document.getElementById('emailAddress');
   var emailMessage = document.getElementById('emailMessage');
@@ -135,15 +137,12 @@ window.sendMail = function() {
   
   document.getElementById('mainMenu').classList.add('disabled');
 
-  showLoading();
-
   axios.post('./methods/_mail.php', {
     name:    emailName.value,
     email:   emailAddress.value,
     message: emailMessage.value
   }).then(function(response){
     var obj = (response.data);
-
     if (obj.status == 'success') {
       emailName.value = '';
       emailAddress.value = '';
@@ -153,8 +152,6 @@ window.sendMail = function() {
     document.getElementById('returnContactMsg').innerHTML = obj.msg;
     document.getElementById('returnContactLink').innerHTML = obj.link;
     document.getElementById('contactReturn').classList.add(obj.status);
-
-  }).finally(function(response){
 
     hideLoading();
 
