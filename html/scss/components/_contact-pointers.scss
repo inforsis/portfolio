@@ -22,7 +22,7 @@
 	}
 }
 
-//medium // mobile
+//medium
 @media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
 	.contact-pointers {
 		flex-direction: column;
@@ -42,15 +42,22 @@
 //mobile
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
 	.contact-pointers {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		flex-direction: row;
+		align-items: initial;
+		justify-content: initial;
 		bottom: initial;
-    	height: 100%;
+		height: 100%;
+		width: 100%;
+		position: relative;
 		>.item {
-			>.material-icons,
+			word-break: break-all;
+			padding: 0 0.5rem;
+			>.material-icons {
+				display:none;
+			}
 			>.title	{
 				color: $primary-dark-color;
+				font-size: 0.65rem;
 			}
 		}
 	}

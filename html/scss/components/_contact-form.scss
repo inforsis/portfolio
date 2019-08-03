@@ -9,12 +9,14 @@
 //mobile
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
 	.contact-form {
-		width: 80%;
+		width: 100%;
+		height: calc(100% - 40px);
 		.fieldset {
 			display: inline-block;
 			width: 50%;
 			float:left;
 			padding-right: 30px;
+			margin-bottom: 30px;
 			&:nth-child(3) {
 				width: 100%;
 				float:none;

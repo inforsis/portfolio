@@ -102,6 +102,9 @@
 	.works {
 		.item {
 			padding: 30px 60px;
+			&:first-child {
+				padding-top: 0;
+			}
 		}
 	}
 }
@@ -109,8 +112,20 @@
 //mobile
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
 	.works {
+		height: 100%;
 		.item {
 			padding: 30px;
+			&:first-child {
+				padding-top: 0;
+			}
+			.container {
+				.thumb {
+					display: none;
+				}
+				>.content {
+					width: 100%;
+				}
+			}
 		}
 	}
 }

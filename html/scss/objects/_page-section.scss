@@ -24,6 +24,10 @@
 //mobile
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
     .page-section {
-        padding: 30px 30px 80px;
+        padding: 1.5rem 1.5rem 5.0rem;
+        >.title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
     }
 }
