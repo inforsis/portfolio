@@ -19,3 +19,11 @@
         //overflow-y: auto;	
     }
 }
+
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+    .page-section {
+        padding: 30px 30px 80px;
+    }
+}

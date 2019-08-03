@@ -28,14 +28,14 @@
     <script src="js/modernizr.js"></script>    
 </head>
 <body>
-
+        <input type="checkbox" autocomplete="off" onchange="randomdFunFacts()" class="func-facts-check" id="checkFunFacts">    
     <aside class="side">
         <figure class="profile-pic">
             <span class="pic-rounded">
                 <img src="img/jadson_moreira.jpg" class="img" alt="foto perfil">                
             </span>
         </figure>
-        <nav class="main-menu">
+        <nav id="mainMenu" class="main-menu">
             <a href="#home" class="item" data-title="Home">
                 <i class="material-icons">home</i>
             </a>
@@ -320,26 +320,39 @@
 
                 <div data-simplebar data-simplebar-auto-hide="false" class="contact-form main-content">
                     
-                    <form action="" class="form">
+                    <input type="checkbox" id="contactStatus" autocomplete="off" class="contact-status d-none">
+                    
+                    <div class="container-form">
                         
-                        <fieldset class="fieldset">
-                            <input type="text" id="emailName" class="field-form field-text" autocomplete="off" maxlenght="40" required="required" title="Enter your name">
-                            <span class="field-placeholder">Your name</span>
-                        </fieldset>
+                        <form action="" class="form">
+                            
+                            <fieldset class="fieldset">
+                                <input type="text" id="emailName" class="field-form field-text" autocomplete="off" maxlenght="40" required="required" title="Enter your name">
+                                <span class="field-placeholder">Your name</span>
+                            </fieldset>
+    
+                            <fieldset class="fieldset">
+                                <input type="text" id="emailAddress" class="field-form field-text" autocomplete="off" maxlenght="60" required="required" title="Enter e-mail address">
+                                <span class="field-placeholder">E-mail</span>
+                            </fieldset>
+    
+                            <fieldset class="fieldset">
+                                <textarea class="field-form field-text textarea" id="emailMessage" autocomplete="off" required="required" title="Enter message"></textarea>
+                                <span class="field-placeholder">Message</span>
+                            </fieldset>
+    
+                            <button type="button" id="btnSend" onclick="sendMail()" class="btn btn-send" title="Click to send"></button>
+    
+                        </form>
 
-                        <fieldset class="fieldset">
-                            <input type="text" id="emailAddress" class="field-form field-text" autocomplete="off" maxlenght="60" required="required" title="Enter e-mail address">
-                            <span class="field-placeholder">E-mail</span>
-                        </fieldset>
+                        <div id="contactReturn" class="contact-return">
 
-                        <fieldset class="fieldset">
-                            <textarea class="field-form field-text textarea" id="emailMessage" autocomplete="off" required="required" title="Enter message"></textarea>
-                            <span class="field-placeholder">Message</span>
-                        </fieldset>
+                            <p id="returnContactMsg" class="msg"></p>    
+                            <label id="returnContactLink" for="contactStatus" class="link"></label>                                                         
 
-                        <button type="button" id="btnSend" onclick="sendMail()" class="btn btn-send" title="Click to send"></button>
+                        </div><!--.contact-return-->
 
-                    </form>
+                    </div><!--.container-form-->
 
                 </div><!--.contact-form-->
 
@@ -376,7 +389,6 @@
 
     </main>
 
-    <input type="checkbox" autocomplete="off" onchange="randomdFunFacts()" class="func-facts-check" id="checkFunFacts">    
     <label id="funFactsCard" class="fun-facts-card animated" for="checkFunFacts" title="Click to close">
         
         <div class="content">

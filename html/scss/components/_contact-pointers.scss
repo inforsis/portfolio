@@ -8,14 +8,50 @@
 		text-align: center;
 		flex-grow: 1;
 		>.material-icons {
-			color: $primary-light-color;
     		display: block;
     		font-size: 2rem;
 		}
+		>.material-icons,
 		>.title {
 			color: $primary-light-color;
+		}
+		>.title {
 			font-size: 0.8rem;
 			font-family: $primary-font-light;
+		}
+	}
+}
+
+//medium // mobile
+@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
+	.contact-pointers {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		bottom: initial;
+    	height: 100%;
+		>.item {
+			>.material-icons,
+			>.title	{
+				color: $primary-dark-color;
+			}
+		}
+	}
+}
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.contact-pointers {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		bottom: initial;
+    	height: 100%;
+		>.item {
+			>.material-icons,
+			>.title	{
+				color: $primary-dark-color;
+			}
 		}
 	}
 }

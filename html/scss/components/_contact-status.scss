@@ -1,0 +1,13 @@
+.contact-status {
+    &:checked {
+        +.container-form {
+            transform: rotateY(180deg);
+            .form {
+                display:none;
+            }
+            .contact-return {
+                display: block;
+            }
+        }
+    }
+}

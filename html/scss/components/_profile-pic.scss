@@ -24,3 +24,11 @@
 		}		
 	}
 }
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.profile-pic {
+		right: initial;
+		left: 0;
+	}
+}

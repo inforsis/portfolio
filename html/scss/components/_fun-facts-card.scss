@@ -1,9 +1,14 @@
 .func-facts-check {
 	display:none;
 	&:checked {
-		+.fun-facts-card {
+		~.fun-facts-card {
 			display: flex;
 			pointer-events: initial;
+		}
+		~.side {
+			.main-menu {
+				pointer-events: none;
+			}
 		}		
 	}
 }
@@ -40,7 +45,7 @@
 		position: relative;
 		z-index: 1;
 		>p {
-			font-size: 0.8rem;
+			font-size: 0.9rem;
 			line-height: 1.5rem;
 			font-family: $primary-font-light-ex-italic;
 		}

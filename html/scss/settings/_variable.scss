@@ -22,6 +22,7 @@ $primary-color: #ff4f4f;
 $secundary-color: #0098ff;
 $primary-light-color: #f8f8f8;
 $success-color: #3ed223;
+$fail-color: #f71919;
 
 //dimensions
 $height-main-menu-item: 50px;
@@ -40,3 +41,14 @@ $pdFieldTxt: 20px;
 //ui
 $fontSizeField: 18px;
 $lineHeightFIeld: $fontSizeField;
+
+//responsive
+// tablet
+$screen-min-tablet: '800px';
+$screen-max-tablet: '1024px';
+//mobile
+$screen-min-mobile: '0';
+$screen-max-mobile: '799px';
+//medium
+$screen-min-md: $screen-min-tablet;
+$screen-max-md: '1279px';

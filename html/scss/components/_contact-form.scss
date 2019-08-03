@@ -3,4 +3,23 @@
 	height: 100%;
 	overflow-y: auto;
 	margin: 0 50px 0 0;
+	perspective: 1000px;
+}
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.contact-form {
+		width: 80%;
+		.fieldset {
+			display: inline-block;
+			width: 50%;
+			float:left;
+			padding-right: 30px;
+			&:nth-child(3) {
+				width: 100%;
+				float:none;
+				display: block;
+			}
+		}
+	}
 }

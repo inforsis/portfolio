@@ -1,3 +1,6 @@
+.timeline {
+	max-width: 50%;
+}
 .timeline-pagination {
 	padding: 0 50px;
 	display: flex;
@@ -51,5 +54,19 @@
 		font-size: 0.9rem;
     	font-family: $primary-font-light-italic;
     	margin-bottom: 30px;
+	}
+}
+
+//medium
+@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
+	.timeline-information {
+		padding-left: 30px;
+	}
+}
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.timeline {
+		display: none;
 	}
 }

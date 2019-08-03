@@ -3,6 +3,7 @@
 	width: 100%;
 	overflow-y: auto; 
 	overflow-x: hidden; 
+	flex-grow: 2;
 	p {
 		font-size: 1rem;
 		line-height: 1.6rem;
@@ -11,6 +12,17 @@
 		letter-spacing: 1px;
 		&:last-of-type {
 			margin-bottom: 0;
+		}
+	}
+}
+
+//mobile
+@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
+	.about-resume {
+		p {
+			font-size: 0.9rem;
+			line-height: 1.5rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 }

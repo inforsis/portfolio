@@ -28,10 +28,20 @@
     //envia o email sem anexo
     if (mail($for,$subject,$mens,$headers)) {
       //enviado
-      echo 'true';
+      //echo 'true';
+      $return = array(
+        'status' => 'success',
+        'msg' => 'Message sent.',
+        'link' => 'Send another message.',
+      );
     }
     else {
       //falha
-      echo 'false';
+      $return = array(
+        'status' => 'fail',
+        'msg' => 'Error to send message.',
+        'link' => 'Try again.',
+      );
     }
+    echo json_encode($return);
 ?>

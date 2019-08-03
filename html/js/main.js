@@ -131,6 +131,9 @@ window.sendMail = function() {
   emailAddress.classList.add('disabled');
   emailMessage.classList.add('disabled');
   document.getElementById('btnSend').classList.add('sending');
+  document.getElementById('contactStatus').checked = true;
+  
+  document.getElementById('mainMenu').classList.add('disabled');
 
   showLoading();
 
@@ -141,9 +144,15 @@ window.sendMail = function() {
   }).then(function(response){
     var obj = (response.data);
 
-    emailName.value = '';
-    emailAddress.value = '';
-    emailMessage.value = '';
+    if (obj.status == 'success') {
+      emailName.value = '';
+      emailAddress.value = '';
+      emailMessage.value = '';
+    }
+
+    document.getElementById('returnContactMsg').innerHTML = obj.msg;
+    document.getElementById('returnContactLink').innerHTML = obj.link;
+    document.getElementById('contactReturn').classList.add(obj.status);
 
   }).finally(function(response){
 
@@ -152,7 +161,11 @@ window.sendMail = function() {
     emailName.classList.remove('disabled');
     emailAddress.classList.remove('disabled');
     emailMessage.classList.remove('disabled');
+
     document.getElementById('btnSend').classList.remove('sending');
+
+    document.getElementById('mainMenu').classList.remove('disabled');
+
   })
 }
 
