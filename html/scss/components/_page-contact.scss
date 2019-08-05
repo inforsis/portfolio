@@ -13,3 +13,12 @@
 		}
 	}
 }
+
+//tablet
+@media (min-width: $screen-min-tablet) and (max-width: $screen-max-tablet) {
+	#contact {
+		>.content {
+			display: inherit;
+		}
+	}
+}

@@ -5,6 +5,7 @@ window.onload = function() {
   loadTimeLine();
   loadPortfolio();
   loadBlogPosts();
+  //alert(window.innerWidth);
 }
 
 window.changeTimeLine = function(elem,year) {

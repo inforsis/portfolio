@@ -114,7 +114,7 @@
 	.works {
 		height: 100%;
 		.item {
-			padding: 30px;
+			padding: 30px 30px 0px 0; 
 			&:first-child {
 				padding-top: 0;
 			}
@@ -124,6 +124,20 @@
 				}
 				>.content {
 					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+//tablet
+@media (min-width: $screen-min-tablet) and (max-width: $screen-max-tablet) {
+	.works {
+		.item {
+			padding-bottom: 60px;
+			.container {
+				.thumb {
+					display: inherit;
 				}
 			}
 		}

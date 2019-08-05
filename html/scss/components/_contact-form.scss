@@ -25,3 +25,23 @@
 		}
 	}
 }
+
+//tablet
+@media (min-width: $screen-min-tablet) and (max-width: $screen-max-tablet) {
+	.contact-form {
+		width: 70%;
+		height: inherit;
+		.fieldset {
+			display: inherit;
+			width: inherit;
+			float: inherit;
+		}
+	}
+}
+
+//mobile
+@media (max-width: 799px) {
+	.contact-form {
+		display: none;
+	}
+}

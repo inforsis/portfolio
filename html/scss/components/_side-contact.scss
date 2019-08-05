@@ -10,3 +10,18 @@
 		width: 100%;
 	}
 }
+
+//medium
+@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
+	.side-contact {
+		width: 30%;
+	}
+}
+
+//medium
+@media (min-width: 799px) {
+	.side-contact {
+		height: 100%;
+	}
+}
+

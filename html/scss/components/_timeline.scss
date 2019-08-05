@@ -70,3 +70,10 @@
 		display: none;
 	}
 }
+
+//tablet
+@media (min-width: $screen-min-tablet) and (max-width: $screen-max-tablet) {
+	.timeline {
+		display: flex; 
+	}
+}
