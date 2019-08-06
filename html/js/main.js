@@ -1,11 +1,18 @@
 import { CountUp } from './countUp.min.js';
 
 window.onload = function() {
-  loadCountNumber();
   loadTimeLine();
   loadPortfolio();
   loadBlogPosts();
   //alert(window.innerWidth);
+}
+
+window.navMainMenu = function(item) {
+  var active = document.getElementsByClassName('main-menu-item active');
+    [].forEach.call(active, function(el) {
+    el.classList.remove("active");
+  });
+  document.getElementById(item).classList.add('active');
 }
 
 window.changeTimeLine = function(elem,year) {
@@ -25,7 +32,7 @@ window.changeTimeLine = function(elem,year) {
   }); 
 }
 
-function loadCountNumber() {
+window.loadCountNumber = function() {
   var workCount = new CountUp('workCount1', 10);
   workCount.start();
   var projectsCount = new CountUp('projectsCount1', 100);

@@ -41,13 +41,6 @@
 					&.mobile {
 						margin: 0 auto;
 					}
-					&.tablet,
-					&.mobile,
-					&.web {
-						&:hover {
-							z-index:3;
-						}
-					}
 				}
 			}
 			>.content {

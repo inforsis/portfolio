@@ -1,7 +1,7 @@
 .main-menu {
 	width: $side-width;
 	height: auto;
-	>.item {
+	>.main-menu-item {
 		display: flex;
 	    flex-direction: column;
 	    justify-content: center;

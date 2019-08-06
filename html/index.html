@@ -36,19 +36,19 @@
             </span>
         </figure>
         <nav id="mainMenu" class="main-menu">
-            <a href="#home" class="item" data-title="Home">
+            <a href="#home" id="navHome" class="main-menu-item active" onclick="navMainMenu(this.id);" data-title="Home">
                 <i class="material-icons">home</i>
             </a>
-            <a href="#about" class="item" data-title="About">
+            <a href="#about" id="navAbout" class="main-menu-item" onclick="navMainMenu(this.id);" data-title="About">
                 <i class="material-icons">person</i>
             </a>
-            <a href="#works" class="item" data-title="Works">
+            <a href="#works" id="navWorks" class="main-menu-item" onclick="navMainMenu(this.id); loadCountNumber();" data-title="Works">
                 <i class="material-icons">work</i>
             </a>
-            <a href="#blog" class="item" data-title="Articles">
+            <a href="#blog" id="navBlog" class="main-menu-item" onclick="navMainMenu(this.id);" data-title="Articles">
                 <i class="material-icons">public</i>
             </a>
-            <a href="#contact" class="item" data-title="Contact">
+            <a href="#contact" id="navContact" class="main-menu-item" onclick="navMainMenu(this.id);" data-title="Contact">
                 <i class="material-icons">email</i>
             </a>
         </nav>
