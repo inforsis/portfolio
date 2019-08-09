@@ -5,7 +5,24 @@
 	width: 100%;
 	.item {
 		display: flex;
-		padding: 60px 120px 120px;
+		padding: 60px 120px;
+		position: relative;
+		&:after {
+			content: '';
+			border-bottom: 1px #112C30 solid;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 15%;
+			right: 0;
+			margin: auto;
+			opacity: 0.8;
+		}
+		&:last-of-type {
+			&:after {
+				display: none;
+			}
+		}
 		.container {
 			display: flex;
 			width: 100%; 
@@ -73,6 +90,9 @@
 						font-size: 11px;
 						text-transform: uppercase;
 						letter-spacing: 1px;
+						&:after {
+							display: none;
+						}
 					}
 				}
 			}
@@ -107,7 +127,7 @@
 	.works {
 		height: 100%;
 		.item {
-			padding: 30px 30px 0px 0; 
+			padding: 30px 30px 30px 0; 
 			&:first-child {
 				padding-top: 0;
 			}

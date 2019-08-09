@@ -1,113 +1,28 @@
 .contact-pointers {
-	position: absolute;
-	bottom: 30px;
-	z-index: 1;
 	display: flex;
-	width: 100%;
+	flex-direction: column;
+	margin-bottom: 0;
+	>.title {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-family: $main-font-bold;
+		color:$primary-dark-color;
+		margin-bottom: 20px;
+		display: block; 
+	}
 	>.item {
-		text-align: center;
-		flex-grow: 1;
+		margin-bottom: 15px;
 		>.material-icons {
     		display: block;
     		font-size: 2rem;
 		}
 		>.material-icons,
 		>.title {
-			color: $primary-light-color;
+			color: $primary-dark-color;
 		}
 		>.title {
 			font-size: 0.8rem;
 			font-family: $primary-font-light;
-		}
-	}
-}
-
-
-//mobile
-@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
-	.contact-pointers {
-		flex-direction: row;
-		align-items: initial;
-		justify-content: initial;
-		bottom: initial;
-		height: 100%;
-		width: 100%;
-		position: relative;
-		>.item {
-			word-break: break-all;
-			padding: 0 0.5rem;
-			>.material-icons {
-				display:none;
-			}
-			>.title	{
-				color: $primary-dark-color;
-				font-size: 0.65rem;
-			}
-		}
-	}
-}
-
-
-//medium
-@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
-	.contact-pointers {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		bottom: initial;
-		height: 100%;
-		position: inherit;
-		>.item {
-			>.material-icons,
-			>.title	{
-				color: $primary-dark-color;
-			}
-			>.material-icons {
-				display: inherit;
-			}
-		}
-	}
-}
-
-
-//medium
-@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
-	.contact-pointers {
-		height: 170px;
-		position: absolute;
-		display: block;
-		margin: auto;
-		top: 0;
-		>.item {
-			margin-bottom: 60px;
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-		}
-	}
-}
-
-//mobile
-@media (max-width: 799px) {
-	.contact-pointers {
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		bottom: initial;
-		height: 100%;
-		>.item {
-			margin-bottom: 60px;
-			display: block;
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-			>.material-icons,
-			>.title	{
-				color: $primary-dark-color;
-			}
-			>.material-icons {
-				display: inherit;
-			}
 		}
 	}
 }

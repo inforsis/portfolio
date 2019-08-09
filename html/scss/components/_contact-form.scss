@@ -3,45 +3,4 @@
 	height: 100%;
 	overflow-y: auto;
 	margin: 0 50px 0 0;
-	perspective: 1000px;
-}
-
-//mobile
-@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
-	.contact-form {
-		width: 100%;
-		height: calc(100% - 45px);
-		.fieldset {
-			display: inline-block;
-			width: 50%;
-			float:left;
-			padding-right: 30px;
-			margin-bottom: 30px;
-			&:nth-child(3) {
-				width: 100%;
-				float:none;
-				display: block;
-			}
-		}
-	}
-}
-
-//tablet
-@media (min-width: $screen-min-tablet) and (max-width: $screen-max-tablet) {
-	.contact-form {
-		width: 70%;
-		height: inherit;
-		.fieldset {
-			display: inherit;
-			width: inherit;
-			float: inherit;
-		}
-	}
-}
-
-//mobile
-@media (max-width: 799px) {
-	.contact-form {
-		display: none;
-	}
 }

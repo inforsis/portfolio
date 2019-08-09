@@ -318,68 +318,43 @@
 
             <div class="content">
 
-                <div data-simplebar data-simplebar-auto-hide="false" class="contact-form main-content">
-                    
-                    <input type="checkbox" id="contactStatus" autocomplete="off" class="contact-status d-none">
-                    
+                <div data-simplebar data-simplebar-auto-hide="false" class="main-content container-contact">
+                   
                     <div class="container-form">
-                        
-                        <form action="" class="form">
-                            
-                            <fieldset class="fieldset">
-                                <input type="text" id="emailName" class="field-form field-text" autocomplete="off" maxlenght="40" required="required" title="Enter your name">
-                                <span class="field-placeholder">Your name</span>
-                            </fieldset>
-    
-                            <fieldset class="fieldset">
-                                <input type="text" id="emailAddress" class="field-form field-text" autocomplete="off" maxlenght="60" required="required" title="Enter e-mail address">
-                                <span class="field-placeholder">E-mail</span>
-                            </fieldset>
-    
-                            <fieldset class="fieldset">
-                                <textarea class="field-form field-text textarea" id="emailMessage" autocomplete="off" required="required" title="Enter message"></textarea>
-                                <span class="field-placeholder">Message</span>
-                            </fieldset>
-    
-                            <button type="button" id="btnSend" onclick="sendMail()" class="btn btn-send" title="Click to send"></button>
-    
-                        </form>
 
-                        <div id="contactReturn" class="contact-return">
-
-                            <p id="returnContactMsg" class="msg"></p>    
-                            <label id="returnContactLink" for="contactStatus" class="link"></label>                                                         
-
-                        </div><!--.contact-return-->
+                        <dl class="contact-pointers">
+                            <dt class="title">
+                                JADSON MOREIRA - Front End Developer
+                            </dt>
+                            <dd class="item">
+                                <span class="title">Based in Rio de Janeiro, RJ, BRAZIL</span>
+                            </dd><!--.item-->
+                            <dd class="item">
+                                <a href="tel:+5521980379650" class="title" title="Fell free for call me">+55 21 980379650</a>
+                            </dd><!--.item-->
+                            <dd class="item">
+                                <a href="mailto:inforsis@gmail.com" class="title" title="Use your default app for send me an e-mail.">inforsis[at]gmail.com</a>
+                            </dd><!--.item-->
+                            <dd class="item">
+                                <a href="skype:jadson.moreira?call" class="title" title="Call me on skype">skype</a>
+                            </dd><!--.item-->
+                            <dd class="item">
+                                <a href="https://linkedin.com/inforsis" class="title" title="See my profile on linkedin" target="_blank">linkedin</a>
+                            </dd><!--.item-->
+                            <dd class="item">
+                                <a href="https://twitter.com/inforsis" class="title" title="Fallow me on Twitter" target="_blank">twitter</a>
+                            </dd><!--.item-->
+                            <dd class="item">
+                                <a href="https://github.com/inforsis" class="title" title="Check out my projects on github" target="_blank">github</a>
+                            </dd><!--.item-->
+                            <dd class="item">
+                                <a href="https://medium.com/@inforsis" class="title" title="Read my articles on medium" target="_blank">medium</a>
+                            </dd><!--.item-->
+                        </dl><!--.contact-pointers-->
 
                     </div><!--.container-form-->
 
                 </div><!--.contact-form-->
-
-                <div class="side-contact">
-                    
-                    <div class="map-content">
-                        
-                        <div id="map"></div>
-
-                    </div><!--.map-content--> 
-
-                    <ul class="contact-pointers">
-                        <li class="item">
-                            <i class="material-icons">place</i>
-                            <span class="title">Based in Rio de Janeiro, RJ, BRAZIL</span>
-                        </li><!--.item-->
-                        <li class="item">
-                            <i class="material-icons">phone</i>
-                            <a href="tel:+5521980379650" class="title">+55 21 980379650</a>
-                        </li><!--.item-->
-                        <li class="item">
-                            <i class="material-icons">send</i>
-                            <a href="mailto:inforsis@gmail.com" class="title" title="Use your default app for send me an e-mail.">inforsis[at]gmail.com</a>
-                        </li><!--.item-->
-                    </ul><!--.contact-pointers-->                  
-
-                </div><!--.side-contact-->
         
             </div><!--.content-->
 
@@ -408,10 +383,6 @@
     <script src="js/axios.min.js"></script>
     <script src="js/countUp.min.js" type="module"></script>    
     <script src="js/simplebar.min.js" type="module"></script>    
-    <script src="js/map.js"></script>    
-    <script src="js/main.js" type="module"></script>    
-    <script async defer 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMJ0Buz4RGeUtnM1W7puZNSSeKuWoBD3s&callback=initMap">
-    </script>
+    <script src="js/main.js" type="module"></script>
 </body>
 </html>
