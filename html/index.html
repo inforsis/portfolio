@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
 
-    <title>Jadson Moreira | Desenvolvedor Web Front End</title>
+    <title>Jadson Moreira | Front End Developer</title>
     <meta name="description" content="" />
     <meta name="keywords" content="">
     <meta name="author" content="Jadson Moreira"/>
@@ -39,16 +39,16 @@
             <a href="#home" id="navHome" class="main-menu-item active" onclick="navMainMenu(this.id);" data-title="Home">
                 <i class="material-icons">home</i>
             </a>
-            <a href="#about" id="navAbout" class="main-menu-item" onclick="navMainMenu(this.id);" data-title="About">
+            <a href="#about" id="navAbout" class="main-menu-item" onclick="navMainMenu(this.id); aboutResume();" data-title="About">
                 <i class="material-icons">person</i>
             </a>
-            <a href="#works" id="navWorks" class="main-menu-item" onclick="navMainMenu(this.id); loadCountNumber();" data-title="Works">
+            <a href="#works" id="navWorks" class="main-menu-item" onclick="navMainMenu(this.id); loadPortfolio();" data-title="Works">
                 <i class="material-icons">work</i>
             </a>
-            <a href="#blog" id="navBlog" class="main-menu-item" onclick="navMainMenu(this.id);" data-title="Articles">
+            <a href="#blog" id="navBlog" class="main-menu-item" onclick="navMainMenu(this.id); loadBlogPosts();" data-title="Articles">
                 <i class="material-icons">public</i>
             </a>
-            <a href="#contact" id="navContact" class="main-menu-item" onclick="navMainMenu(this.id);" data-title="Contact">
+            <a href="#contact" id="navContact" class="main-menu-item" onclick="navMainMenu(this.id); loadContacts();" data-title="Contact">
                 <i class="material-icons">email</i>
             </a>
         </nav>
@@ -62,20 +62,7 @@
 
         <section id="home" class="page-section">
             
-            <div class="cover-area">
-                <span>Hi, </span>
-                <h2>I'm Jadson Moreira!</h2>
-                <h1>Front End Developer</h1>
-                <h1 class="skills">
-                    Talking with UX Designers, Back End Developers and Users.
-                </h1>
-                <div style="display:none">
-                    <h1>Web developer</h1>
-                    <h1 class="skills">
-                        <span title="HTML5 + CSS3 + JAVASCRIPT + VIEW + REACT + NODEJS">Front End</span> + <span title="PHP + MYSQL">Back End</span> + <span title="WORDPRESS">CMS</span> + <span title="FLUTTER + REACT NATIVE">Apps</span>
-                    </h1>                    
-                </div>
-            </div><!--.cover-text-->
+            <div id="coverArea" class="cover-area"></div><!--.cover-text-->
             
         </section><!--#home-->
 
@@ -87,81 +74,13 @@
 
             <div class="content">
                 
-                <div data-simplebar data-simplebar-auto-hide="false" class="about-resume">
-
-                    <p>
-                        Front End developer with over 10 years of professional experience, based in Rio de Janeiro. Vasco´s fan, from Bahia and brazilian from heart.
-                    </p>
-                    
-                    <p>
-                        Born and brought up in Itabuna city in South Bahia. When I was a kid, I always wanted be an engineer, but sometimes had the thought to be a veterinarian. My mother had the desire for me be a nurse, and I have tried to study economy, manager and math. But my mind will always drag me in having an interest to study computer science while in University.
-                    </p>
-
-                    <p>
-                        In April 2010, I graduated in Information Systems and moved to Rio de Janeiro and I started to work for ZONAInternet agency. At ZONAInternet I worked with the Front End team until November 2012.
-                    </p>
-
-                    <p>
-                        From December 2012 until now, I am having a great time working at CENPES/Petrobras as Front End development.
-                    </p>
-
-                </div><!--.about-resume-->
+                <div data-simplebar data-simplebar-auto-hide="false" id="aboutResume" class="about-resume"></div><!--.about-resume-->
 
                 <div class="content-side timeline">
 
-                    <dl id="timeLine" class="timeline-information">
-
-                        <dt class="year">
-                            2012
-                        </dt>
-
-                        <dd class="item">
-                            Start at CENPES/Petrobras on UX Team like Front End developer.
-                        </dd>
-
-                        <dd class="item">
-                            Completed works at ZONAInternet agency for 3 years. Now follow new goals.
-                        </dd>
-                        
-                    </dl><!--.timeline-information-->
+                    <dl id="timeLine" class="timeline-information"></dl><!--.timeline-information-->
                     
-                    <div id="timeLinePagination" class="timeline-pagination">
-                        <label class="item">
-                            <input type="radio" onchange="changeTimeLine(this,2012)" checked name="timeline" value="2012">
-                            <i class="bullet"></i>
-                            2012
-                        </label>
-                        <label class="item">
-                            <input type="radio" onchange="changeTimeLine(this,2010)" name="timeline" value="2010">
-                            <i class="bullet"></i>
-                            2010
-                        </label>
-                        <label class="item">
-                            <input type="radio" onchange="changeTimeLine(this,2009)" name="timeline" value="2009">
-                            <i class="bullet"></i>
-                            2009
-                        </label>
-                        <label class="item">
-                            <input type="radio" onchange="changeTimeLine(this,2008)" name="timeline" value="2008">
-                            <i class="bullet"></i>
-                            2008
-                        </label>
-                        <label class="item">
-                            <input type="radio" onchange="changeTimeLine(this,2007)" name="timeline" value="2007">
-                            <i class="bullet"></i>
-                            2007
-                        </label>
-                        <label class="item">
-                            <input type="radio" onchange="changeTimeLine(this,2005)" name="timeline" value="2005">
-                            <i class="bullet"></i>
-                            2005
-                        </label>
-                        <label class="item">
-                            <input type="radio" onchange="changeTimeLine(this,2004)" name="timeline" value="2004">
-                            <i class="bullet"></i>
-                            2004
-                        </label>
-                    </div><!--.timeline-pagination-->
+                    <div id="timeLinePagination" class="timeline-pagination"></div><!--.timeline-pagination-->
 
                 </div><!--.timeline-->
 
@@ -180,108 +99,14 @@
 
                 <div  data-simplebar data-simplebar-auto-hide="false" class="works">
                     
-                    <div id="worksContent">
-                        
-                        <div class="item">
-                            
-                            <div class="container">
-    
-                                <figure class="thumb">
-                                    <img src="img/work/_web.png" class="web" alt="">
-                                    <img src="img/work/_mobile.png" class="mobile" alt="">
-                                    <img src="img/work/_tablet.png" class="tablet" alt="">
-                                </figure><!--.thumb-->
-    
-                                <div class="content">
-                                    
-                                    <h3 class="title"></h3>
-    
-                                    <small class="description"></small>
-    
-                                    <ul class="listing">
-                                        
-                                        <li class="item"></li>
-    
-                                    </ul><!--.listing-->
-    
-                                    <a href="#" target="_blank"></a>
-    
-                                </div><!--.content-->
-                                
-                            </div><!--.content-->
-    
-                        </div><!--.item-->
-
-                    </div><!--#worksContent-->
+                    <div id="worksContent"></div><!--#worksContent-->
 
                 </div><!--.works-->
 
 
             </div><!--.content-->
 
-            <ul class="statistics">
-
-                <li class="item">
-
-                    <div class="content">
-                    
-                        <i class="icon material-icons">work</i>
-                        <span class="number">+<span id="workCount1" ></span></span>
-                        <small class="text">Years Experience</small>
-                        
-                    </div>                        
-
-                </li>
-
-                <li class="item">
-
-                    <div class="content">
-                    
-                        <i class="icon material-icons">business</i>
-                        <span id="businessCount1" class="number">5</span>
-                        <small class="text">work´s places</small>
-                        
-                    </div>                        
-
-                </li>
-
-                <li class="item">
-
-                    <div class="content">
-                    
-                        <i class="icon material-icons">done_all</i>
-                        <span class="number">+<span id="projectsCount1"></span></span>
-                        <small class="text">done projects</small>
-                        
-                    </div>                        
-
-                </li>
-
-                <li class="item">
-
-                    <div class="content">
-                    
-                        <i class="icon material-icons">code</i>
-                        <span class="number">+<span id="codeCount1"></span></span>
-                        <small class="text">code skills</small>
-                        
-                    </div>                        
-
-                </li>
-
-                <li class="item">
-
-                    <div class="content">
-                    
-                        <i class="icon material-icons">local_cafe</i>
-                        <span id="coffeeCount1" class="number">0</span>
-                        <small class="text">coffee cup</small>
-                        
-                    </div>                        
-
-                </li>
-                
-            </ul><!--.statistics-->
+            <ul id="statistics" class="statistics"></ul><!--.statistics-->
 
         </section><!--#works-->
 
@@ -320,39 +145,7 @@
 
                 <div data-simplebar data-simplebar-auto-hide="false" class="main-content container-contact">
                    
-                    <div class="container-form">
-
-                        <dl class="contact-pointers">
-                            <dt class="title">
-                                JADSON MOREIRA - Front End Developer
-                            </dt>
-                            <dd class="item">
-                                <span class="title">Based in Rio de Janeiro, RJ, BRAZIL</span>
-                            </dd><!--.item-->
-                            <dd class="item">
-                                <a href="tel:+5521980379650" class="title" title="Fell free for call me">+55 21 980379650</a>
-                            </dd><!--.item-->
-                            <dd class="item">
-                                <a href="mailto:inforsis@gmail.com" class="title" title="Use your default app for send me an e-mail.">inforsis[at]gmail.com</a>
-                            </dd><!--.item-->
-                            <dd class="item">
-                                <a href="skype:jadson.moreira?call" class="title" title="Call me on skype">skype: jadson.moreira</a>
-                            </dd><!--.item-->
-                            <dd class="item">
-                                <a href="https://linkedin.com/inforsis" class="title" title="See my profile on linkedin" target="_blank">linkedin</a>
-                            </dd><!--.item-->
-                            <dd class="item">
-                                <a href="https://twitter.com/inforsis" class="title" title="Fallow me on Twitter" target="_blank">twitter</a>
-                            </dd><!--.item-->
-                            <dd class="item">
-                                <a href="https://github.com/inforsis" class="title" title="Check out my projects on github" target="_blank">github</a>
-                            </dd><!--.item-->
-                            <dd class="item">
-                                <a href="https://medium.com/@inforsis" class="title" title="Read my articles on medium" target="_blank">medium</a>
-                            </dd><!--.item-->
-                        </dl><!--.contact-pointers-->
-
-                    </div><!--.container-form-->
+                    <div id="contactBox" class="container-form"></div><!--.container-form-->
 
                 </div><!--.contact-form-->
         
@@ -383,6 +176,6 @@
     <script src="js/axios.min.js"></script>
     <script src="js/countUp.min.js" type="module"></script>    
     <script src="js/simplebar.min.js" type="module"></script>    
-    <script src="js/main.js" type="module"></script>
+    <script src="js/main.min.js" type="module"></script>
 </body>
 </html>
