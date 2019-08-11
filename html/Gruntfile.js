@@ -7,12 +7,10 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     //minificando arquivos (css e js)
     uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-      },
-      build: {
-        src: 'js/<%= pkg.name %>.js',
-        dest: 'js/<%= pkg.name %>.min.js'
+      my_target: {
+        files: {
+          'js/main.min.js': ['js/main.js']
+        }
       }
     },
     //compilando o css
