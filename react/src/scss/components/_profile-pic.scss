@@ -1,0 +1,34 @@
+.profile-pic {
+	width:60px;
+	height: 60px;
+	display: block;
+	position: absolute;
+	top:0;
+	right: 0;
+	.pic-rounded {
+		width: 40px;
+		height: 40px;
+		display: block;
+		border-radius: 100%;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		>.img {
+			width: 100%;
+			height: auto;
+			display: block; 
+		}		
+	}
+}
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.profile-pic {
+		right: initial;
+		left: 0;
+	}
+}

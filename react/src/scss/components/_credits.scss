@@ -1,0 +1,30 @@
+.credits {
+	font-size: 9px;
+	font-family: $primary-font-regular;
+	position: absolute;
+	bottom: 0;
+	padding: 5px;
+	text-align: center;
+	opacity: 0.4;
+	transition: all 1s ease;
+	>.material-icons {
+		font-size: 10px;
+		color:$secundary-link-color; 
+	}
+	&:hover {
+		opacity: 1;
+	}
+}
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.credits {
+		width: 60px;
+		height: 35px;
+		z-index: 9;
+		right: 0;
+		top: 0;
+		margin: auto;
+		position: absolute;
+	}
+}

@@ -1,0 +1,87 @@
+[
+    {
+        "title": "Maker Factory",
+        "description": "Front End development, HTML, CSS with responsive.",
+        "link": "http://makerfactory.com.br",
+        "thumbnails": [{
+                        "web":  "./img/work/makerfactory_web.png",
+                        "mobile": "./img/work/makerfactory_mobile.png",
+                        "tablet": "./img/work/makerfactory_tablet.png"
+                    }],
+        "tags": [
+                    "freelancer",
+                    "CSS3",
+                    "HTML5",
+                    "Javascript"
+                ]
+    },
+    {
+        "title": "Lowndes Condomínios e Locações",
+        "description": "Front End development, HTML, CSS with responsive. Javascript (jquery and ajax) and Wordpress integration.",
+        "link": "http://makerfactory.com.br",
+        "thumbnails": [{
+                        "web":  "./img/work/lowndes_web.png",
+                        "mobile": "./img/work/lowndes_mobile.png",
+                        "tablet": "./img/work/lowndes_tablet.png"
+                    }],
+        "tags": [
+                    "freelancer",
+                    "wordpress",
+                    "CSS3",
+                    "HTML5",
+                    "PHP"
+                ]
+    },
+    {
+        "title": "Pedro Bucher - Photography",
+        "description": "Front End development, HTML, CSS with responsive. Javascript (jquery and ajax) and Wordpress integration.",
+        "link": "http://pedrobucher.com",
+        "thumbnails": [{
+                        "web":  "./img/work/pedrobucher_web.png",
+                        "mobile": "./img/work/pedrobucher_mobile.png",
+                        "tablet": "./img/work/pedrobucher_tablet.png"
+                    }],
+        "tags": [
+                    "freelancer",
+                    "wordpress",
+                    "CSS3",
+                    "HTML5",
+                    "PHP"
+                ]
+    },
+    {
+        "title": "Culinária Brilhante",
+        "description": "Front End development, HTML, CSS with responsive. Javascript (jquery and ajax) and Wordpress integration.",
+        "link": "http://culinariabrilhante.com/",
+        "thumbnails": [{
+                        "web":  "./img/work/culinariabrilhante_web.png",
+                        "mobile": "./img/work/culinariabrilhante_mobile.png",
+                        "tablet": "./img/work/culinariabrilhante_tablet.png"
+                    }],
+        "tags": [
+                    "freelancer",
+                    "wordpress",
+                    "CSS3",
+                    "HTML5",
+                    "PHP"
+                ]
+    },
+    {
+        "title": "HELP Informnática - Serviços e suporte a informática",
+        "description": "Front End development, HTML, CSS with responsive. Javascript (jquery and ajax) and Wordpress integration.",
+        "link": "http://helpinformaticarj.com.br",
+        "thumbnails": [{
+                        "web":  "./img/work/helpinformatica_web.png",
+                        "mobile": "./img/work/helpinformatica_mobile.png",
+                        "tablet": "./img/work/helpinformatica_tablet.png"
+                    }],
+        "tags": [
+                    "freelancer",
+                    "wordpress",
+                    "CSS3",
+                    "HTML5",
+                    "Design",
+                    "PHP"
+                ]
+    }
+]

@@ -1,0 +1,37 @@
+[
+    {
+        "title": "HOME",
+        "icon": "home",
+        "router": "#home",
+        "id": "navHome",
+        "callback": ""
+    },
+    {
+        "title": "ABOUT",
+        "icon": "person",
+        "router": "#about",
+        "id": "navAbout",
+        "callback": "aboutResume()"
+    },
+    {
+        "title": "WORKS",
+        "icon": "work",
+        "router": "#works",
+        "id": "navworks",
+        "callback": "loadPortfolio()"
+    },
+    {
+        "title": "ARTICLES",
+        "icon": "public",
+        "router": "#blog",
+        "id": "navBlog",
+        "callback": "loadBlogPosts()"
+    },
+    {
+        "title": "CONTACT",
+        "icon": "email",
+        "router": "#contact",
+        "id": "navContact",
+        "callback": "loadContacts()"
+    }
+]
