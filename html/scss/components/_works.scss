@@ -38,6 +38,7 @@
 					&.web {
 						width: 100%;
 						bottom: 0;
+						position: relative;
 						~.mobile {
 							left: 0;
 							z-index: 2;
