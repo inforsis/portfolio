@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
   const sass = require('node-sass');
+  require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
@@ -12,6 +13,16 @@ module.exports = function(grunt) {
           'js/main.min.js': ['js/main.js']
         }
       }
+    },
+    minifyHtml: {
+        options: {
+            cdata: true
+        },
+        dist: {
+            files: {
+                'public/index.html': 'index.html'
+            }
+        }
     },
     //compilando o css
     sass: {
@@ -86,5 +97,6 @@ module.exports = function(grunt) {
   grunt.registerTask('moveFiles', ['copy']);
   grunt.registerTask('watchCSS', ['watch']);
   grunt.registerTask('css', ['sass']);
+  grunt.registerTask('minify', ['minifyHtml']);
 
 };
