@@ -17,7 +17,7 @@ class Side extends React.Component {
                 </figure>
                 <Menu/>
                 <span className="credits">
-                    Done with <i className="material-icons">favorite</i> and <i className="material-icons">audiotrack</i>
+                    Done with <i className="material-icons heart">favorite</i> and <i className="material-icons song">audiotrack</i>
                 </span>
             </aside>
         );

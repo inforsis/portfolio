@@ -1,0 +1,37 @@
+.container-site {
+    width: 100%;
+    display: flex;
+}
+.page-section {
+	display:flex;
+	flex-direction: column;
+	height: 100%;
+    position: relative;
+    background-color: $primary-light-color;
+    padding: 50px;
+    >.title {
+    	font-size: 2.3rem;
+        line-height: 100%;
+    	color:$primary-color;
+    	font-family: $main-font-regular;
+    	margin-bottom: 30px;
+    }
+    >.content {
+    	display: flex; 
+        height: 100%; 
+        position: relative;
+        //overflow-y: auto;	
+    }
+}
+
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+    .page-section {
+        padding: 1.5rem 1.5rem 5.0rem;
+        >.title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
