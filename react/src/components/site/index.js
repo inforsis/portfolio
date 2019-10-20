@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-import styles from './scss/main.scss';
+import './scss/main.scss';
 import Side from '../side/index.js';
 import Home from '../home/index.js';
 import FunFacts from '../funfacts/index.js';

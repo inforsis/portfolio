@@ -7,7 +7,7 @@
 	color:$primary-color;
 	letter-spacing: 0.3rem; //5px;
 	text-shadow: 0px 0px 3px rgba(17,48,48,0.8);
-	>small {
+	small {
 		font-size: 0.48rem; // 0.72rem;
 		line-height: 1.2rem;
 		font-family: $primary-font-light;
@@ -27,7 +27,7 @@
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
 	.cover-area {
 		font-size: 1.60rem; 
-		>small {
+		small {
 			font-size: 0.30rem;
 		}
 	}
