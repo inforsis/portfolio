@@ -1,6 +1,6 @@
 <template>
   <body id="app">
-    <input type="checkbox" autocomplete="off" onchange="" class="func-facts-check" id="checkFunFacts">
+    <input type="checkbox" autocomplete="off" onchange="" class="func-facts-check" id="checkFunFacts" style="display:none">
     <Side/>
     <Home/>
   </body>
@@ -37,65 +37,18 @@ export default {
 <style lang="scss">
   
   // Material Design Icons
-  @import './fonts/material-design-icons/material-icons.css'; 
+  @import './assets/fonts/material-design-icons/material-icons.css'; 
 
   //IBMPLEXSANS
-  @import './fonts/ibmplexsans/stylesheet.css'; 
+  @import './assets/fonts/ibmplexsans/stylesheet.css'; 
 
   //Titillium Web
-  @import './fonts/titilliumweb/stylesheet.css';
+  @import './assets/fonts/titilliumweb/stylesheet.css';
   
-  @import './scss/main.scss';
+  @import './assets/scss/main.scss';
 
-  .main-container {	
-    flex-grow: 1;
-    overflow: hidden; 
-  }
+  @import './assets/scss/objects/_main-container.scss';
 
-  //mobile
-  @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
-    .main-container {
-      height: 100%;
-    }
-  }
-
-  .page-section {
-    display:flex;
-    flex-direction: column;
-    height: 100%;
-      position: relative;
-      background-color: $primary-light-color;
-      padding: 50px;
-      >.title {
-        font-size: 2.3rem;
-          line-height: 100%;
-        color:$primary-color;
-        font-family: $main-font-regular;
-        margin-bottom: 30px;
-      }
-      >.content {
-        display: flex; 
-          height: 100%; 
-          position: relative;
-          //overflow-y: auto;	
-      }
-  }
-
-
-  //mobile
-  @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
-      .page-section {
-          padding: 1.5rem 1.5rem 5.0rem;
-          >.title {
-              font-size: 1.8rem;
-              margin-bottom: 1rem;
-          }
-      }
-  }
-
-
-  .func-facts-check {
-      display: none;
-  }
+  @import './assets/scss/objects/_page-section.scss';
 
 </style>
