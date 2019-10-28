@@ -2,7 +2,9 @@
   <body id="app">
     <input type="checkbox" autocomplete="off" onchange="" class="func-facts-check" id="checkFunFacts" style="display:none">
     <Side/>
-    <Home/>
+    <main class="main-container animated">
+      <router-view></router-view>
+    </main><!--.main-container-->
   </body>
 </template>
 
@@ -10,13 +12,11 @@
 import axios from 'axios'
 
 import Side from './components/side/Side.vue'
-import Home from './components/home/Home.vue'
 
 export default {
   name: 'app',
   components: {
-    Side,
-    Home
+    Side
   },
   methods: {
     randomdFunFacts: function() {

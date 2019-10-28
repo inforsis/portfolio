@@ -1,15 +1,9 @@
 <template>
-  <main class="main-container animated">
-
-        <section id="home" class="page-section">
+  <section id="home" class="page-section">
             
-            <div id="coverArea" class="cover-area">
-              {{titulo}}
-            </div><!--.cover-text-->
-            
-        </section><!--#home-->
-
-  </main>
+      <div id="coverArea" class="cover-area"></div><!--.cover-text-->
+      
+  </section><!--#home-->
 </template>
 
 <script>
@@ -22,7 +16,6 @@ export default {
           let page = (response.data);
           let cover = document.getElementById('coverArea');
           cover.innerHTML = page.content.rendered;
-          //cover.innerHTML = Object.keys(page);
         })
       }
   },

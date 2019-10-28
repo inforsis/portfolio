@@ -15,12 +15,10 @@
           menu.innerHTML = "";
           for (let i in obj) {
             let item = document.createElement('A');
-            if (i == 0)
-              item.classList.add('active');
+            
             item.classList.add('main-menu-item');
-            item.setAttribute('href','/'+obj[i].slug);      
-            item.setAttribute('id','nav-'+obj[i].slug);      
-            //item.setAttribute('onclick','navMainMenu(this.id);'+obj[i].callback);      
+            item.setAttribute('href','#/'+obj[i].slug);      
+            item.setAttribute('id','nav-'+obj[i].slug);            
             item.setAttribute('data-title',obj[i].slug); 
             
             let icon = document.createElement('I');
