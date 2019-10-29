@@ -3,12 +3,12 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  import api from '../../api'
   export default {
     name: 'Menu',
     methods: {
       loadMenu: function() {
-        axios.get('http://localhost/jadson.dev/portfolio/wordpress/wp-json/wp/v2/pages?filter[orderby]=date&order=asc')
+        api.get('pages?filter[orderby]=date&order=asc')
         .then(function(response){
           let obj = (response.data);
           var menu = document.getElementById('mainMenu');

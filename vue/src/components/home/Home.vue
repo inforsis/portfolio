@@ -7,11 +7,11 @@
 </template>
 
 <script>
-import axios from 'axios'
+import api from '../../api'
 export default {
   methods: {
       loadCoverArea: function() {
-        axios.get('http://localhost/jadson.dev/portfolio/wordpress/wp-json/wp/v2/pages/7')
+        api.get('pages/7')
         .then(function(response){
           let page = (response.data);
           let cover = document.getElementById('coverArea');
@@ -19,8 +19,19 @@ export default {
         })
       }
   },
-  mounted() {
-    this.loadCoverArea();
+  data () {
+    return {
+      loading: true,
+      errored: false
+    }
+  },
+  async mounted () {
+    try {
+      this.loadCoverArea();
+    }
+    finally {
+      this.loading = false
+    }
   }
 }
 </script>

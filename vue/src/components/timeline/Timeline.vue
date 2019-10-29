@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import axios from 'axios'
+import api from '../../api'
 export default {
   methods: {
       loadTimeLine: function() {
-       axios.get('http://localhost/jadson.dev/portfolio/wordpress/wp-json/wp/v2/timeline?per_page=99&filter[orderby]=date&order=desc')
+       api.get('timeline?per_page=99&filter[orderby]=date&order=desc')
       .then(function(response){
         var obj = (response.data);
         var timeLinePagination = document.getElementById('timeLinePagination');
@@ -36,6 +36,9 @@ export default {
           input.setAttribute('value',year);
           input.setAttribute('v-on:change','changeTimeLine()');
           
+          if (i == 0)
+            input.setAttribute('checked','checked');
+          
           label.appendChild(input);
 
           let bullet = document.createElement('I');
@@ -47,15 +50,12 @@ export default {
           label.appendChild(yearTxt);
 
           timeLinePagination.appendChild(label);
-
-          if (i == 0)
-              input.click();
               
         }
       });
     },
     changeTimeLine: function() {
-      axios.get('http://localhost/jadson.dev/portfolio/wordpress/wp-json/wp/v2/timeline/35')
+      api.get('timeline/35')
       .then(function(response){
         var obj = (response.data);
         var timeline = document.getElementById('timeLine');

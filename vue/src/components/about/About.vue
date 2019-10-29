@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import api from '../../api'
 import Timeline from '../timeline/Timeline'
 export default {
   name: 'About',
@@ -26,7 +26,7 @@ export default {
   },
   methods: {
       aboutResume: function() {
-        axios.get('http://localhost/jadson.dev/portfolio/wordpress/wp-json/wp/v2/pages/9')
+        api.get('pages/9')
         .then(function(response){
           let about = (response.data);
           document.getElementById('aboutTitle').innerHTML = about.title.rendered;
@@ -34,8 +34,13 @@ export default {
         })
       }
   },
-  mounted() {
-    this.aboutResume();
+  async mounted () {
+    try {
+      this.aboutResume();
+    }
+    finally {
+      this.loading = false
+    }
   }
 }
 </script>

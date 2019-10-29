@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router'
 import Home from './components/home/Home'
 import About from './components/about/About'
+import Blog from './components/blog/Blog'
 
 export default new VueRouter({
   routes: [
@@ -18,6 +19,11 @@ export default new VueRouter({
       path: '/about',
       name: 'About',
       component: About
+    },
+    {
+      path: '/articles',
+      name: 'Blog',
+      component: Blog
     }
   ]
 })

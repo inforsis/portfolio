@@ -4,7 +4,9 @@
     <Side/>
     <main class="main-container animated">
       <router-view></router-view>
+      <label class="fun-facts-icon" for="checkFunFacts" data-title="Fun Fact about me"></label>
     </main><!--.main-container-->
+    <Loading/>
   </body>
 </template>
 
@@ -12,11 +14,13 @@
 import axios from 'axios'
 
 import Side from './components/side/Side.vue'
+import Loading from './components/loading/Loading.vue'
 
 export default {
   name: 'app',
   components: {
-    Side
+    Side,
+    Loading
   },
   methods: {
     randomdFunFacts: function() {
