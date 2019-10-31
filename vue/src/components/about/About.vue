@@ -1,12 +1,12 @@
 <template>
         <section id="about" class="page-section">
             
-            <h1 class="title" id="aboutTitle"></h1>
+            <h1 class="title" id="aboutTitle" v-html="about[0]"></h1>
 
             <div class="content">
                 
                 <div data-simplebar data-simplebar-auto-hide="false" class="about-resume">
-                    <div id="aboutResume"></div><!--#aboutResume-->
+                    <div id="aboutResume" v-html="about[1]"></div><!--#aboutResume-->
                 </div><!--.about-resume-->
 
                 <Timeline/>
@@ -24,13 +24,19 @@ export default {
   components: {
     Timeline
   },
+  data () {
+    return {
+      about: []
+    }
+  },
   methods: {
       aboutResume: function() {
+        var _this = this;
         api.get('pages/9')
         .then(function(response){
           let about = (response.data);
-          document.getElementById('aboutTitle').innerHTML = about.title.rendered;
-          document.getElementById('aboutResume').innerHTML = about.content.rendered;
+          _this.about.push(about.title.rendered);
+          _this.about.push(about.content.rendered);
         })
       }
   },

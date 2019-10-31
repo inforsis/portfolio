@@ -52,6 +52,21 @@ register_post_type('timeline', array(
 	)
 ));
 
+//secao funfacts
+register_post_type('funfacts', array(
+	'label' => 'Funfacts',
+	'public' => true,
+	'show_ui' => true,
+	'show_in_rest' => true,
+	'capability_type' => 'post',
+	'hierarchical' => true,
+	'rewrite' => array('slug' => 'funfacts'),
+	'query_var' => true,
+	'supports' => array(
+		'title'
+	)
+));
+
 
 
 if ( function_exists( 'add_theme_support' ) ) { 

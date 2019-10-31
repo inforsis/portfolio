@@ -1,9 +1,22 @@
 <template>
   <div class="content-side timeline">
       
-      <dl id="timeLine" class="timeline-information"></dl><!--.timeline-information-->
+      <dl id="timeLine" class="timeline-information">
+        <dt class="year">
+          2012
+        </dt>
+        <dd class="item">
+          Start at CENPES/Petrobras on UX Team like Front End developer.
+        </dd>
+      </dl><!--.timeline-information-->
       
-      <div id="timeLinePagination" class="timeline-pagination"></div><!--.timeline-pagination-->
+      <div id="timeLinePagination" class="timeline-pagination">
+        <label class="item" v-for="year in years" v-bind:key="year">
+          <input type="radio" name="timeline" :value="year" onchange="changeTimeLine(this,2012)">
+          <i class="bullet"></i>
+          <span>{{year}}</span>
+        </label>
+      </div><!--.timeline-pagination-->
 
   </div><!--.timeline-->
 </template>
@@ -11,13 +24,17 @@
 <script>
 import api from '../../api'
 export default {
+  data() {
+    return {
+      years: []
+    }
+  },
   methods: {
       loadTimeLine: function() {
+       var _this = this; 
        api.get('timeline?per_page=99&filter[orderby]=date&order=desc')
       .then(function(response){
         var obj = (response.data);
-        var timeLinePagination = document.getElementById('timeLinePagination');
-        timeLinePagination.innerHTML = '';
         var years = new Array();
         for (var i=0;i<obj.length;i++) {
           let year = obj[i].date.split('-');     
@@ -26,31 +43,7 @@ export default {
         years = years.filter((v,i,a) => a.indexOf(v) === i);
         for (i in years) {
           let year = years[i];
-          
-          let label = document.createElement('LABEL');
-          label.classList.add('item');
-          
-          let input = document.createElement('INPUT');
-          input.setAttribute('type','radio');
-          input.setAttribute('name','timeline');
-          input.setAttribute('value',year);
-          input.setAttribute('v-on:change','changeTimeLine()');
-          
-          if (i == 0)
-            input.setAttribute('checked','checked');
-          
-          label.appendChild(input);
-
-          let bullet = document.createElement('I');
-          bullet.classList.add('bullet');
-          label.appendChild(bullet);
-
-          let yearTxt = document.createElement('SPAN');
-          yearTxt.innerHTML = year;
-          label.appendChild(yearTxt);
-
-          timeLinePagination.appendChild(label);
-              
+          _this.years.push(year);
         }
       });
     },

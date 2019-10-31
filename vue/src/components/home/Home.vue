@@ -1,7 +1,9 @@
 <template>
   <section id="home" class="page-section">
             
-      <div id="coverArea" class="cover-area"></div><!--.cover-text-->
+      <div id="coverArea" class="cover-area">
+        <span v-html="coverHtml[1]"></span>
+      </div><!--.cover-text-->
       
   </section><!--#home-->
 </template>
@@ -9,29 +11,23 @@
 <script>
 import api from '../../api'
 export default {
+  data () {
+    return {
+      coverHtml: ['']
+    }
+  },
   methods: {
-      loadCoverArea: function() {
+      loadCoverArea() {
+        var _this = this;
         api.get('pages/7')
         .then(function(response){
           let page = (response.data);
-          let cover = document.getElementById('coverArea');
-          cover.innerHTML = page.content.rendered;
+          _this.coverHtml.push(page.content.rendered);
         })
       }
   },
-  data () {
-    return {
-      loading: true,
-      errored: false
-    }
-  },
-  async mounted () {
-    try {
-      this.loadCoverArea();
-    }
-    finally {
-      this.loading = false
-    }
+  mounted() {
+    this.loadCoverArea();
   }
 }
 </script>

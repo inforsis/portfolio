@@ -1,49 +1,50 @@
 <template>
-  <nav id="mainMenu" class="main-menu"></nav>  
+  <nav id="mainMenu" class="main-menu">
+      <a class="main-menu-item" :href="item.slug" v-for="item in menu" v-bind:key="item" :data-title="item.title">
+        <i class="material-icons">{{item.icon}}</i>
+      </a>
+  </nav>  
 </template>
 
 <script>
   import api from '../../api'
   export default {
     name: 'Menu',
+    data() {
+      return {
+        menu: []
+      }
+    },
     methods: {
       loadMenu: function() {
+        var _this = this;
         api.get('pages?filter[orderby]=date&order=asc')
         .then(function(response){
           let obj = (response.data);
-          var menu = document.getElementById('mainMenu');
-          menu.innerHTML = "";
-          for (let i in obj) {
-            let item = document.createElement('A');
+          for (let i in obj) { 
+                      
+            let slug = '/#/'+obj[i].slug;
+            let title = obj[i].slug;
+            let icon;
             
-            item.classList.add('main-menu-item');
-            item.setAttribute('href','#/'+obj[i].slug);      
-            item.setAttribute('id','nav-'+obj[i].slug);            
-            item.setAttribute('data-title',obj[i].slug); 
-            
-            let icon = document.createElement('I');
-            icon.classList.add('material-icons');
             switch (obj[i].slug) {
               case 'home':
-                icon.innerHTML = 'home';
+                icon = 'home';
                 break;
               case 'about':
-                icon.innerHTML = 'person';
+                icon = 'person';
                 break;
               case 'works':
-                icon.innerHTML = 'work';
+                icon = 'work';
                 break;
               case 'articles':
-                icon.innerHTML = 'public';
+                icon = 'public';
                 break;
               case 'contact':
-                icon.innerHTML = 'email';
+                icon = 'email';
                 break;
             }
-
-            item.appendChild(icon);
-
-            menu.appendChild(item);
+            _this.menu.push({'title': title, 'icon': icon, 'slug': slug});
           }
         })
       }
