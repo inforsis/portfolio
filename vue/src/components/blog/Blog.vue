@@ -5,7 +5,7 @@
           Recent articles
       </h1>
 
-      <div data-simplebar data-simplebar-auto-hide="false" class="content article-list">
+      <simplebar data-simplebar-auto-hide="false" class="content article-list">
 
           <div id="listingPosts">
               <div class="article" v-for="item in article" v-bind:key="item">
@@ -19,15 +19,21 @@
               </div>
           </div><!--#listingPost-->
   
-      </div><!--.content-->
+      </simplebar><!--.content-->
 
   </section><!--#blog--> 
 </template>
 
 <script>
   import api from '../../api'
+  import simplebar from 'simplebar-vue';
+  import 'simplebar/dist/simplebar.min.css';
+
   export default {
     name: 'Blog', 
+    components: {
+      simplebar
+    },
     data () {
       return {
         article: []
@@ -36,7 +42,8 @@
     methods: {
       loadBlogPosts: function() {
         var _this = this;
-        api.get('posts/')
+        const URL = 'posts/';
+        api.get(URL)
         .then(function(response){
           var obj = (response.data);
           for (var i = 0; i < obj.length; i++) {

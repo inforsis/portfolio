@@ -1,6 +1,6 @@
 <template>
   <nav id="mainMenu" class="main-menu">
-      <a class="main-menu-item" :href="item.slug" v-for="item in menu" v-bind:key="item" :data-title="item.title">
+      <a v-for="item in menu" class="main-menu-item" :href="item.slug" :id="item.title+'-menu'" v-on:click="navMainMenu(item.title+'-menu')" v-bind:key="item" :data-title="item.title">
         <i class="material-icons">{{item.icon}}</i>
       </a>
   </nav>  
@@ -18,9 +18,11 @@
     methods: {
       loadMenu: function() {
         var _this = this;
-        api.get('pages?filter[orderby]=date&order=asc')
+        const URL = 'pages?filter[orderby]=date&order=asc';
+        api.get(URL)
         .then(function(response){
           let obj = (response.data);
+          //alert (obj)
           for (let i in obj) { 
                       
             let slug = '/#/'+obj[i].slug;
@@ -47,6 +49,13 @@
             _this.menu.push({'title': title, 'icon': icon, 'slug': slug});
           }
         })
+      },
+      navMainMenu: function(item) {
+        var active = document.getElementsByClassName('main-menu-item active');
+          [].forEach.call(active, function(el) {
+          el.classList.remove("active");
+        });
+        document.getElementById(item).classList.add('active');
       }
     },
     mounted() {

@@ -5,9 +5,9 @@
 
             <div class="content">
                 
-                <div data-simplebar data-simplebar-auto-hide="false" class="about-resume">
+                <simplebar class="about-resume" data-simplebar-auto-hide="false">
                     <div id="aboutResume" v-html="about[1]"></div><!--#aboutResume-->
-                </div><!--.about-resume-->
+                </simplebar><!--.about-resume-->
 
                 <Timeline/>
 
@@ -19,10 +19,15 @@
 <script>
 import api from '../../api'
 import Timeline from '../timeline/Timeline'
+
+import simplebar from 'simplebar-vue';
+import 'simplebar/dist/simplebar.min.css';
+
 export default {
   name: 'About',
   components: {
-    Timeline
+    Timeline,
+    simplebar
   },
   data () {
     return {
@@ -32,7 +37,8 @@ export default {
   methods: {
       aboutResume: function() {
         var _this = this;
-        api.get('pages/9')
+        const URL = 'pages/9';
+        api.get(URL)
         .then(function(response){
           let about = (response.data);
           _this.about.push(about.title.rendered);

@@ -2,7 +2,7 @@
   <section id="home" class="page-section">
             
       <div id="coverArea" class="cover-area">
-        <span v-html="coverHtml[1]"></span>
+        <span v-html="coverHtml[0]"></span>
       </div><!--.cover-text-->
       
   </section><!--#home-->
@@ -13,13 +13,14 @@ import api from '../../api'
 export default {
   data () {
     return {
-      coverHtml: ['']
+      coverHtml: []
     }
   },
   methods: {
       loadCoverArea() {
         var _this = this;
-        api.get('pages/7')
+        const URL = 'pages/7';
+        api.get(URL)
         .then(function(response){
           let page = (response.data);
           _this.coverHtml.push(page.content.rendered);
