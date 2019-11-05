@@ -1,6 +1,6 @@
 <template>
   <body id="app">
-    <input type="checkbox" autocomplete="off" onchange="" class="func-facts-check" id="checkFunFacts" style="display:none">
+    <input type="checkbox" autocomplete="off" v-on:change="randomFunFacs()" class="func-facts-check" id="checkFunFacts" style="display:none">
     <Side/>
     <main class="main-container animated">
       <router-view></router-view>
@@ -11,8 +11,7 @@
 </template>
 
 <script>
-import axios from 'axios'
-
+import api from './api'
 import Side from './components/side/Side.vue'
 import Loading from './components/loading/Loading.vue'
 
@@ -23,14 +22,15 @@ export default {
     Loading
   },
   methods: {
-    randomdFunFacts: function() {
-      axios.get('./json/funfacts.json')
+    randomFunFacs: function(){
+      api.get('funfacts')
       .then(function(response){
         var obj = (response.data);
-        var id = Math.floor((Math.random() * obj.length) + 1);
-        var factsHTML = obj[id].fact;
-        document.getElementById('funFacts').innerHTML = factsHTML;
-        document.getElementById('funFactID').innerHTML = id;
+        let min = 0;
+        let max = obj.length;
+        let i = Math.floor(Math.random() * (max - min)) + min; 
+        document.getElementById('funFactID').innerHTML = i;
+        document.getElementById('funFacts').innerHTML =  obj[i].title.rendered;
       })
     }
   }

@@ -5,7 +5,9 @@ import Blog from './components/blog/Blog'
 import Works from './components/works/Works'
 import Contact from './components/contact/Contact'
 
-export default new VueRouter({
+const router = new VueRouter({
+  base: "/",
+  linkActiveClass: 'active',
   routes: [
     {
       path: '/',
@@ -39,3 +41,26 @@ export default new VueRouter({
     }
   ]
 })
+
+router.beforeResolve((to, from, next) => {
+  // If this isn't an initial page load.
+  if (to.name) {
+      // Start the route progress bar.
+      if (document.getElementById('funFactsCard')) {
+        document.getElementById('checkFunFacts').checked = true;
+      }
+      
+  }
+  next()
+})
+
+router.afterEach(() => {
+  // Complete the animation of the route progress bar.
+  if (document.getElementById('funFactsCard')) {
+    window.setTimeout(function(){      
+      document.getElementById('checkFunFacts').click();
+    },1500);
+  }
+})
+
+export default router
