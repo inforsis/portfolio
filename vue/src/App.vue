@@ -29,7 +29,7 @@ export default {
         let min = 0;
         let max = obj.length;
         let i = Math.floor(Math.random() * (max - min)) + min; 
-        document.getElementById('funFactID').innerHTML = i;
+        document.getElementById('funFactID').innerHTML = (i + 1);
         document.getElementById('funFacts').innerHTML =  obj[i].title.rendered;
       })
     }

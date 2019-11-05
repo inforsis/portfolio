@@ -62,6 +62,6 @@
   @import '../../assets/scss/settings/settings';
   @import '../../assets/scss/tools/tools';
 
-  @import './assets/scss/components/_main-menu.scss';
   @import './assets/scss/objects/_main-menu.scss';
+  @import './assets/scss/components/_main-menu.scss';
 </style>

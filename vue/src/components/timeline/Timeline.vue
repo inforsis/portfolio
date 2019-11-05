@@ -84,6 +84,6 @@ export default {
 <style lang="scss">
   @import '../../assets/scss/settings/settings';
   @import '../../assets/scss/tools/tools';
-  @import './assets/scss/components/_timeline.scss';
   @import './assets/scss/objects/_content-side.scss';
+  @import './assets/scss/components/_timeline.scss';
 </style>

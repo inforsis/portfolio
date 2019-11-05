@@ -59,7 +59,7 @@ router.afterEach(() => {
   if (document.getElementById('funFactsCard')) {
     window.setTimeout(function(){      
       document.getElementById('checkFunFacts').click();
-    },1500);
+    },1200);
   }
 })
 
