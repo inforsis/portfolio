@@ -1,38 +1,29 @@
 <template>
   <body id="app">
-    <input type="checkbox" autocomplete="off" v-on:change="randomFunFacs()" class="func-facts-check" id="checkFunFacts" style="display:none">
+    <NprogressContainer/>
+    <input type="checkbox" autocomplete="off"  class="func-facts-check" id="checkFunFacts">
     <Side/>
     <main class="main-container animated">
       <router-view></router-view>
       <label class="fun-facts-icon" for="checkFunFacts" data-title="Fun Fact about me"></label>
     </main><!--.main-container-->
-    <Loading/>
+    <Funfacts/>
   </body>
 </template>
 
 <script>
-import api from './api'
+//import api from './api'
 import Side from './components/side/Side.vue'
-import Loading from './components/loading/Loading.vue'
+import Funfacts from './components/funfacts/Funfacts.vue'
+
+import NprogressContainer from 'vue-nprogress/src/NprogressContainer'
 
 export default {
   name: 'app',
   components: {
     Side,
-    Loading
-  },
-  methods: {
-    randomFunFacs: function(){
-      api.get('funfacts')
-      .then(function(response){
-        var obj = (response.data);
-        let min = 0;
-        let max = obj.length;
-        let i = Math.floor(Math.random() * (max - min)) + min; 
-        document.getElementById('funFactID').innerHTML = (i + 1);
-        document.getElementById('funFacts').innerHTML =  obj[i].title.rendered;
-      })
-    }
+    Funfacts,
+    NprogressContainer
   }
 }
 

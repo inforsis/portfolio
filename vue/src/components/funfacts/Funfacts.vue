@@ -6,10 +6,10 @@
           <img src="./assets/img/Cube-1s-39px.svg" alt="">
 
           <h6 class="title">
-              some fun fact about me #<span id="funFactID" v-html="funfact[0]"></span>
+              some fun fact about me #<span id="funFactID"></span>
           </h6>
           
-          <p id="funFacts" v-html="funfact[1]"></p> 
+          <p id="funFacts"></p> 
 
       </div><!--.content-->
 
@@ -17,32 +17,7 @@
 </template>
 
 <script>
-import api from '../../api'
-export default {
-  data() {
-    return {
-      funfact: []     
-    }
-  },
-  methods: {
-    randomFunFacs: function(){
-      var _this = this;
-      api.get('funfacts')
-      .then(function(response){
-        var obj = (response.data);
-        let min = 0;
-        let max = obj.length;
-        let i = Math.floor(Math.random() * (max - min)) + min; 
-        _this.funfact.push(i);
-        _this.funfact.push(obj[i].title.rendered);
-      })
-    }
-      
-  },
-  mounted() {
-    this.randomFunFacs();
-  }
-}
+//import api from '../../api'
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

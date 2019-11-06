@@ -41,7 +41,7 @@ const router = new VueRouter({
     }
   ]
 })
-
+/*
 router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.
   if (to.name) {
@@ -62,5 +62,6 @@ router.afterEach(() => {
     },1200);
   }
 })
+*/
 
 export default router

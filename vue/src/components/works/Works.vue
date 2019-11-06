@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import api from '../../api';
+import http from '../../api';
 import simplebar from 'simplebar-vue';
 import 'simplebar/dist/simplebar.min.css'
 import Statistics from '../statistics/Statistics'
@@ -61,7 +61,7 @@ export default {
     loadPortfolio: function() {
       var _this = this;
       const URL= 'get-portfolio';
-      api.get(URL)
+      http.get(URL)
       .then(function(response){
         var obj = (response.data);
         for (let i=0; i < obj.length; i++) {
