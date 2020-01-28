@@ -8,7 +8,7 @@
         <dd class="item" v-for="events in objEvents[0].events" v-bind:key="events" v-html="events"></dd>
       </dl><!--.timeline-information-->
       
-      <div id="timeLinePagination" class="timeline-pagination">
+      <div id="timeLinePagination" class="timeline-pagination"> 
         <label class="item" v-for="(year,index) in objYears" v-bind:key="year">
           <input type="radio" v-if="index === 0" checked="checked" name="timeline" :value="year" autocomplete="off" v-on:change="changeTimeLine(year)">
           <input type="radio" v-else name="timeline" :value="year" autocomplete="off" v-on:change="changeTimeLine(year)">
@@ -31,51 +31,46 @@ export default {
   },
   methods: {
       loadTimeLine: function() {
-       var _this = this; 
-       const URL = 'timeline?per_page=99&filter[orderby]=date&order=desc';
-       api.get(URL)
-      .then(function(response){
-        var obj = (response.data);
-        var years = new Array();
-        var events = new Array(); 
-        for (var i=0;i<obj.length;i++) {
-          let year = obj[i].date.split('-');  
-          let lastYear = obj[0].date.split('-'); 
-          years.push(year[0]);
-          if (parseInt(year[0]) === parseInt(lastYear[0])) {
-            events.push(obj[i].title.rendered);            
+        var _this = this; 
+        const URL = 'timeline?per_page=99&filter[orderby]=date&order=desc';
+        api.get(URL)
+        .then(function(response){
+          var obj = (response.data);
+          var years = new Array();
+          var events = new Array(); 
+          for (var i=0;i<obj.length;i++) {
+            let year = obj[i].date.split('-');  
+            let lastYear = obj[0].date.split('-'); 
+            years.push(year[0]);
+            if (parseInt(year[0]) === parseInt(lastYear[0])) {
+              events.push(obj[i].title.rendered);            
+            }
           }
-        }
-        years = years.filter((v,i,a) => a.indexOf(v) === i);
-        for (i in years) {
-          let year = years[i];
-          _this.objYears.push(year);
-          
-        }
-        _this.objEvents = [];
-        _this.objEvents.push({'year':2012,events});
-      });
-    },
-    changeTimeLine: function(selectYear) {
-      var _this = this;
-      const URL = 'timeline?per_page=99&filter[orderby]=date&order=desc';
-      api.get(URL)
-      .then(function(response){
-        var obj = (response.data);  
-        var events = new Array();     
-        for (let i in obj) {
-          let year = obj[i].date.split('-');
-          if (parseInt(year) === parseInt(selectYear)) {
-            events.push(obj[i].title.rendered);            
+          years = years.filter((v,i,a) => a.indexOf(v) === i);
+          for (i in years) {
+            let year = years[i];
+            _this.objYears.push(year);          
           }
-        }
-        _this.objEvents = [];
-        _this.objEvents.push({'year':selectYear,events});
-      }); 
-    }
+          _this.objEvents = [];
+          _this.objEvents.push({'year':2012,events});
+        });
+      },
+      changeTimeLine: function(selectYear) {
+          var _this = this;
+          const URL = 'get-event?year='+selectYear;
+          let events = new Array();
+          api.get(URL)
+          .then(function(response){
+            var obj = (response.data); 
+            for (let i in obj) {
+              events.push(obj[i]);
+            _this.objEvents.push({'year':selectYear, 'events': events});
+          }
+        })
+      }
   },
   mounted() {
-    this.loadTimeLine();
+    this.loadTimeLine()
   }
 }
 </script>

@@ -8,6 +8,7 @@ import Contact from './components/contact/Contact'
 const router = new VueRouter({
   base: "/",
   linkActiveClass: 'active',
+  mode: 'history',
   routes: [
     {
       path: '/',

@@ -299,4 +299,53 @@ add_action('rest_api_init', function () {
     $get_custom_field = new get_portfolio;
 });
 
+class get_event {
+	public function __construct() {
+		$version = '2';
+		$namespace = 'wp/v' . $version;
+		$base = 'get-event';
+		register_rest_route($namespace, '/' . $base, array(
+			'methods' => 'GET',
+			'callback' => array($this, 'get_the_event'),
+		));
+	}
+	function get_the_event() {
+		$return = array();
+		
+		$args = array(
+			'public' => true,
+			'_builtin' => false
+		);
+
+		$year = $_GET['year'];
+
+		$arrEvents = array();
+
+		$the_query = new WP_Query(
+			array(
+				'post_type' => 'timeline',
+				'ignore_sticky_posts' => 1,
+				'year'  => $year
+			)
+		);
+
+		if ( $the_query->have_posts() ) :
+		while ( $the_query->have_posts() ) : $the_query->the_post();
+
+			array_push($arrEvents, ['title' => $the_query->the_title()]);
+
+		endwhile;
+		endif;
+
+		wp_reset_postdata();
+
+		$return = $arrEvents;
+		return new WP_REST_Response($return, 200);
+	}
+}
+
+add_action('rest_api_init', function () {
+    $get_custom_field = new get_event;
+});
+
 ?>

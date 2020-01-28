@@ -44,7 +44,6 @@
 <script>
 import http from '../../api';
 import simplebar from 'simplebar-vue';
-import 'simplebar/dist/simplebar.min.css'
 import Statistics from '../statistics/Statistics'
 
 export default {
@@ -66,9 +65,7 @@ export default {
         var obj = (response.data);
         for (let i=0; i < obj.length; i++) {
           _this.objWorks.push(obj[i]);
-          //alert (work)
         }
-        //loadStatistics();
       })
     }
   },

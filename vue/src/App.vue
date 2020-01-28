@@ -16,6 +16,8 @@
 import Side from './components/side/Side.vue'
 import Funfacts from './components/funfacts/Funfacts.vue'
 
+import 'simplebar/dist/simplebar.min.css';
+
 import NprogressContainer from 'vue-nprogress/src/NprogressContainer'
 
 export default {
