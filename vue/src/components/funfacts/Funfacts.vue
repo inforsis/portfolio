@@ -6,10 +6,10 @@
           <img src="./assets/img/Cube-1s-39px.svg" alt="">
 
           <h6 class="title">
-              some fun fact about me #<span id="funFactID"></span>
+              some fun fact about me #<span id="funFactID">{{this.funfactIDProp}}</span>
           </h6>
           
-          <p id="funFacts"></p> 
+          <p id="funFacts" v-html=this.funfactProp></p> 
 
       </div><!--.content-->
 
@@ -17,7 +17,12 @@
 </template>
 
 <script>
-//import api from '../../api'
+  export default {
+    props: {
+      funfactProp: String,
+      funfactIDProp: Number
+    }
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

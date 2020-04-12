@@ -15,9 +15,9 @@ $main-font-bold: 'titillium_webbold';
 
 //colors
 $primary-link-color: #0098ff;
-$secundary-link-color: #ff4f4f;
+$secundary-link-color: #ff4f4f; /*rgb(105, 120, 255)*/
 $primary-dark-color: #112C30;
-$primary-color: #ff4f4f;
+$primary-color: $secundary-link-color;
 $secundary-color: #0098ff;
 $primary-light-color: #f8f8f8;
 $success-color: #3ed223;

@@ -8,7 +8,7 @@ import Contact from './components/contact/Contact'
 const router = new VueRouter({
   base: "/",
   linkActiveClass: 'active',
-  mode: 'history',
+  //mode: 'history',
   routes: [
     {
       path: '/',
@@ -42,15 +42,14 @@ const router = new VueRouter({
     }
   ]
 })
-/*
+
 router.beforeResolve((to, from, next) => {
   // If this isn't an initial page load.
   if (to.name) {
       // Start the route progress bar.
       if (document.getElementById('funFactsCard')) {
         document.getElementById('checkFunFacts').checked = true;
-      }
-      
+      }      
   }
   next()
 })
@@ -58,11 +57,9 @@ router.beforeResolve((to, from, next) => {
 router.afterEach(() => {
   // Complete the animation of the route progress bar.
   if (document.getElementById('funFactsCard')) {
-    window.setTimeout(function(){      
-      document.getElementById('checkFunFacts').click();
-    },1200);
+    document.getElementById('checkFunFacts').checked = false;
   }
 })
-*/
+
 
 export default router
