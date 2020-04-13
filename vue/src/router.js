@@ -4,6 +4,7 @@ import About from './components/about/About'
 import Blog from './components/blog/Blog'
 import Works from './components/works/Works'
 import Contact from './components/contact/Contact'
+import Post from './components/post/Post'
 
 const router = new VueRouter({
   base: "/",
@@ -29,6 +30,11 @@ const router = new VueRouter({
       path: '/articles',
       name: 'Blog',
       component: Blog
+    },
+    {
+      path: '/articles/:slug',
+      name: 'Post',
+      component: Post
     },
     {
       path: '/works',

@@ -11,7 +11,7 @@
               <div class="article" v-for="item in article" v-bind:key="item">
           
                   <h2 class="title">
-                      <a :href="item.link" class="link">{{item.title}}</a>
+                      <router-link :to="item.slug" class="link">{{item.title}}</router-link>
                   </h2>
 
                   <time class="date" datetime="">{{item.data}}</time>
@@ -52,8 +52,10 @@
             let title = obj[i].title.rendered;
 
             let date = obj[i].date.split('T')[0];
+
+            let slug = _this.$route.path+'/'+obj[i].slug;
             
-            _this.article.push({'title': title, 'link':link, 'data':date});
+            _this.article.push({'title': title, 'link':link, 'data':date, 'slug': slug});
           }
         })
       }

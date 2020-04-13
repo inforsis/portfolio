@@ -25,7 +25,7 @@
           //alert (obj)
           for (let i in obj) { 
                       
-            let slug = obj[i].slug;
+            let slug = '/'+obj[i].slug;
             let title = obj[i].slug;
             let icon;
             

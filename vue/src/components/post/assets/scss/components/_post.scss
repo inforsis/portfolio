@@ -1,0 +1,134 @@
+.content-post {
+	width: 960px;
+	max-height: 100%;
+	overflow-y: auto;
+	padding-right: 1.6rem;
+	p {
+		margin-bottom: 1.7rem;
+		line-height: 1.6rem;
+		font-size: 1rem;
+		>img {
+			margin: 15px;	
+		}
+	}
+	img {
+		max-width: 100%;
+	}
+}
+.post-date {
+	font-size: 0.9rem;
+	line-height: 0.9rem;
+	text-transform: uppercase;
+	font-family: $primary-font-light;
+}
+
+.wp-block-code {
+	border: 1px #ccc solid;
+	border-left: 5px $primary-dark-color solid;
+    padding: 30px;
+    max-height: 450px;
+	overflow: auto;
+	code {
+		font-size: 0.8rem;
+	}
+}
+
+thumbnail-post,
+.wp-block-image {
+    margin: 0 auto 30px;
+    max-width: 100%;
+    height: auto;
+    border: 1px rgba(0,0,0,0.2) solid;
+    padding: 10px;
+    >img {
+        margin: 0 0 15px;
+        width: 100%;
+        display: block;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    >figcaption {
+        display: block;
+        font-size: 0.6rem;
+        color: $primary-dark-color;
+		padding: 0;
+		text-transform: uppercase;
+		font-familly:$primary-font-ex-light;
+    }
+}
+
+.wp-block-gallery {
+	display: flex;
+	flex-flow: wrap;
+	&.columns-2 {
+		.blocks-gallery-item {
+			width: 50%;
+		}
+	}
+	&.columns-3 {
+		.blocks-gallery-item {
+			width: 33.33%;
+		}
+	}
+	&.columns-4 {
+		.blocks-gallery-item {
+			width: 25%;
+		}
+	}
+	&.columns-5 {
+		.blocks-gallery-item {
+			width: 20%;
+		}
+	}
+	.blocks-gallery-item  {
+		width: 100%;
+		overflow: hidden;
+		figure {
+			position: relative;
+			height: 100%;
+			overflow:hidden;
+			padding: 15px; 
+			figcaption {
+				position: absolute;
+				bottom: 26px;
+    			left: 26px;
+				background-color: rgba($color: $primary-dark-color, $alpha: 0.3);
+				color:$secundary-link-color;
+				display: block;
+				width: calc(100% - 52px);
+				padding: 10px;
+				font-family: $primary-font-light;
+				font-size: 0.8rem;
+				text-transform: uppercase;
+			}
+			>a {
+				display: block;
+				height: 100%;
+    			overflow: hidden;
+			}
+		}
+		img {
+			max-width: 100%;
+			min-height: 100%;
+			height: auto;
+			border: 1px rgba(0,0,0,0.2) solid;
+			padding: 10px;
+			width: auto;
+		}
+	}
+}
+
+//medium
+@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
+	.content-post {
+		width: 100%;
+	}
+}
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.content-post {
+		width: 100%;
+	}
+}
