@@ -16,13 +16,17 @@ const api = axios.create({
 api.interceptors.request.use(config => {
     if (document.getElementById('funFactsCard')) {
         nprogress.start()
+        document.getElementById('checkFunFacts').click()
     }
     return config
 })
 
 // before a response is returned stop nprogress
 api.interceptors.response.use(response => {
-    nprogress.done();
+    nprogress.done()
+    if (document.getElementById('funFactsCard')) {
+        document.getElementById('checkFunFacts').checked = false
+    }
     return response
 })
 

@@ -2,7 +2,7 @@
   <aside class="side">
       <figure class="profile-pic">
           <span class="pic-rounded">
-              <img src="./assets/img/jadson_moreira.jpg" class="img" alt="foto perfil">                
+              <img src="./assets/img/jadson_moreira.webp" class="img" alt="foto perfil">                
           </span>
       </figure>
       <Menu/>

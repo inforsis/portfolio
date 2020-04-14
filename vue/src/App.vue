@@ -1,11 +1,11 @@
 <template>
   <body id="app">
     <NprogressContainer/>
-    <input type="checkbox" autocomplete="off"  class="func-facts-check" id="checkFunFacts">
+    <input type="checkbox" autocomplete="off" @change="getFunFacts()" class="func-facts-check" id="checkFunFacts">
     <Side/>
     <main class="main-container animated">
       <router-view></router-view>
-      <label class="fun-facts-icon" for="checkFunFacts" @click="getFunFacts()" data-title="Fun Fact about me" ></label>
+      <label class="fun-facts-icon" for="checkFunFacts" data-title="Fun Fact about me" ></label>
     </main><!--.main-container-->
     <Funfacts :funfactProp="this.funfact" :funfactIDProp="this.funfactID" />
   </body>

@@ -18,3 +18,12 @@
 		will-change: transform;
 	}
 }
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	#home {
+		&:before {
+			background-position: left;
+		}
+	}
+}
