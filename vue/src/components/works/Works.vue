@@ -42,7 +42,7 @@
 </template>
 
 <script>
-import http from '../../api';
+import api from '../../api';
 import simplebar from 'simplebar-vue';
 import Statistics from '../statistics/Statistics'
 
@@ -58,14 +58,18 @@ export default {
   },
   methods: {
     loadPortfolio: function() {
+      document.getElementById('checkFunFacts').click()
       var _this = this;
       const URL= 'get-portfolio';
-      http.get(URL)
+      api.get(URL)
       .then(function(response){
         var obj = (response.data);
         for (let i=0; i < obj.length; i++) {
           _this.objWorks.push(obj[i]);
         }
+      })
+      .finally(function(){
+        document.getElementById('checkFunFacts').checked = false
       })
     }
   },

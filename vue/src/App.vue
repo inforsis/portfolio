@@ -44,6 +44,8 @@ export default {
           for (let i in obj) {
             _this.funfactObj.push(obj[i].title.rendered)
           }
+        })
+        .finally(function(){
           _this.getFunFacts()
         })
       },

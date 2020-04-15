@@ -41,6 +41,7 @@
     },
     methods: {
       loadBlogPosts: function() {
+        document.getElementById('checkFunFacts').click()
         var _this = this;
         const URL = 'posts/';
         api.get(URL)
@@ -57,6 +58,9 @@
             
             _this.article.push({'title': title, 'link':link, 'data':date, 'slug': slug});
           }
+        })
+        .finally(function(){
+          document.getElementById('checkFunFacts').checked = false
         })
       }
     },

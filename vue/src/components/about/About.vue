@@ -36,6 +36,7 @@ export default {
   },
   methods: {
       aboutResume: function() {
+        document.getElementById('checkFunFacts').click()
         var _this = this;
         const URL = 'pages/9';
         api.get(URL)
@@ -43,6 +44,9 @@ export default {
           let about = (response.data);
           _this.about.push(about.title.rendered);
           _this.about.push(about.content.rendered);
+        })
+        .finally(function(){
+          document.getElementById('checkFunFacts').checked = false
         })
       }
   },

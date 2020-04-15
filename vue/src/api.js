@@ -14,19 +14,15 @@ const api = axios.create({
 
 // before a request is made start the nprogress
 api.interceptors.request.use(config => {
-    if (document.getElementById('funFactsCard')) {
-        nprogress.start()
-        document.getElementById('checkFunFacts').click()
-    }
+    nprogress.start()
+    //document.getElementById('checkFunFacts').click()
     return config
 })
 
 // before a response is returned stop nprogress
 api.interceptors.response.use(response => {
+    //document.getElementById('checkFunFacts').checked = false
     nprogress.done()
-    if (document.getElementById('funFactsCard')) {
-        document.getElementById('checkFunFacts').checked = false
-    }
     return response
 })
 

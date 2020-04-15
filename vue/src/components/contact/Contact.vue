@@ -43,6 +43,7 @@
     },
     methods: {
       loadContacts: function() {
+        document.getElementById('checkFunFacts').click()
         var _this = this;
         const URL = 'social?per_page=99&filter[orderby]=date&order=asc';
         api.get(URL)
@@ -60,6 +61,9 @@
             
             _this.social.push({'label': label, 'link':link, 'title':title});
           }
+        })
+        .finally(function(){
+          document.getElementById('checkFunFacts').checked = false
         })
       }
     },

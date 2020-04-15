@@ -35,6 +35,7 @@
     },
     methods: {
       getPost: function() {
+        document.getElementById('checkFunFacts').click()
         let _this = this
         let slug = _this.$route.params.slug
         let URL = 'posts?slug='+slug
@@ -47,7 +48,9 @@
           date = date.split(' GMT')[0]
           _this.date  = date.substring(0, date.length - 9)
         })
-        
+        .finally(function(){
+          document.getElementById('checkFunFacts').checked = false
+        })
       }
     },
     mounted() {
