@@ -2,7 +2,7 @@
 	max-width: 50%;
 }
 .timeline-pagination {
-	padding: 0 50px;
+	padding: 0 max(50px, 3vw);
 	display: flex;
 	flex-direction: column;
 	.item {
@@ -50,10 +50,10 @@
 		margin-bottom: 15px;
 	}
 	>.item {
-		line-height: 1.4rem;
-		font-size: 0.9rem;
+		line-height: max(1.4rem, 1.5vw);
+		font-size: max(0.9rem, 1vw);
     	font-family: $primary-font-light-italic;
-    	margin-bottom: 30px;
+    	margin-bottom: max(30px, 2vw);
 	}
 }
 

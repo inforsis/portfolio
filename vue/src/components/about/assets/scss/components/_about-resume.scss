@@ -5,19 +5,23 @@
 	overflow-x: hidden; 
 	flex-grow: 2;
 	p {
-		font-size: 1rem;
-		line-height: 1.6rem;
-		color:$primary-dark-color; 
-		margin-bottom: 1.7rem;
+		font-size: max(0.9rem, 1.2vw);
+		line-height: max(1.5rem,2.0vw);
+		color: #112C30;
+		margin-bottom: max(1rem,2.5vw);
 		letter-spacing: 1px;
 		&:last-of-type {
 			margin-bottom: 0;
 		}
 	}
 }
+#aboutResume {
+	margin-right: 15px;
+	margin-bottom: 50px;
+}
 
 //mobile
-@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+/*@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
 	.about-resume {
 		p {
 			font-size: 0.9rem;
@@ -25,4 +29,4 @@
 			margin-bottom: 1rem;
 		}
 	}
-}
+}*/
