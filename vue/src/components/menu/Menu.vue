@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import api from '../../api'
+  import local from '../../local'
   export default {
     name: 'Menu',
     data() {
@@ -18,8 +18,8 @@
     methods: {
       loadMenu: function() {
         var _this = this;
-        const URL = 'pages?filter[orderby]=date&order=asc';
-        api.get(URL)
+        const URL = 'menu.json';
+        local.get(URL)
         .then(function(response){
           let obj = (response.data);
           //alert (obj)

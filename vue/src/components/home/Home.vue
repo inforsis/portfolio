@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import api from '../../api'
+import local from '../../local'
 export default {
   data () {
     return {
@@ -19,8 +19,8 @@ export default {
   methods: {
       loadCoverArea() {
         var _this = this;
-        const URL = 'pages/7';
-        api.get(URL)
+        const URL = 'home.json';
+        local.get(URL)
         .then(function(response){
           let page = (response.data);
           _this.coverHtml.push(page.content.rendered);
