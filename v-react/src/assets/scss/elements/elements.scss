@@ -31,7 +31,12 @@ body {
     ::selection {
         background-color:$secundary-link-color;
         color:$primary-light-color;
-    }
+	}
+	>div {
+		display: flex;
+		position: relative;
+		width: 100%;
+	}
 }
 a {
 	color: $secundary-link-color;

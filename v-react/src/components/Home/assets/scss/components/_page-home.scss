@@ -1,10 +1,13 @@
+@import 'assets/scss/settings/settings.scss';
+@import 'assets/scss/tools/tools.scss';
+
 #home {
 	justify-content: center;
     align-items: center;
     padding: 0;
     background-color: $primary-dark-color;
 	&:before {
-		background-image: url('./assets/img/bg_setup_2020.webp');
+		background-image: url('../../img/bg_setup_2020.webp');
 		content: '';
 		background-repeat: no-repeat;
 		background-position: center;

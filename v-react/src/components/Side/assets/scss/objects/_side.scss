@@ -1,0 +1,12 @@
+@import 'assets/scss/settings/settings.scss';
+@import 'assets/scss/tools/tools.scss';
+
+.side {
+	width: $side-width;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	z-index:9999;
+}
