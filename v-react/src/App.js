@@ -18,6 +18,8 @@ import Router from './router'
 
 import Side from './components/Side'
 
+import 'simplebar/dist/simplebar.min.css'
+
 function App() {
   
   return (

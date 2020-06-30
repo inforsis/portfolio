@@ -1,0 +1,17 @@
+@import 'assets/scss/settings/settings.scss';
+@import 'assets/scss/tools/tools.scss';
+
+.content-side {
+	display: flex;
+	flex-grow: 0;
+	padding-left: 60px;
+	justify-content: center;
+	align-items: center;
+}
+
+//mobile
+@media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
+	.content-side {
+		padding-left: 30px;
+	}
+}

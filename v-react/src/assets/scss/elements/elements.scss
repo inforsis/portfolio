@@ -16,14 +16,17 @@
 //===========================================================================
 html {
 	font-size: 17px;
+	overflow: hidden;
 }
 body {
 	height: 100%;
+	overflow: hidden;
 	background-color: #f8f8f8;
 	font-family: $primary-font-regular;
 	display: flex;
 	transition: all 0.5s ease;
 	margin: 0;
+	padding: 0;
 	::-moz-selection {
         background-color:$secundary-link-color;
         color:$primary-light-color;
@@ -32,10 +35,11 @@ body {
         background-color:$secundary-link-color;
         color:$primary-light-color;
 	}
-	>div {
+	>#app {
 		display: flex;
 		position: relative;
 		width: 100%;
+		overflow: hidden;
 	}
 }
 a {

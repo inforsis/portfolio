@@ -1,0 +1,35 @@
+@import 'assets/scss/settings/settings.scss';
+@import 'assets/scss/tools/tools.scss';
+
+.about-resume {
+	height: 100%;
+	width: 100%;
+	overflow-y: auto; 
+	overflow-x: hidden; 
+	flex-grow: 2;
+	p {
+		font-size: max(0.9rem, 1.2vw);
+		line-height: max(1.5rem,2.0vw);
+		color: #112C30;
+		margin-bottom: max(1rem,2.5vw);
+		letter-spacing: 1px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+#aboutResume {
+	margin-right: 15px;
+	margin-bottom: 50px;
+}
+
+//mobile
+/*@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.about-resume {
+		p {
+			font-size: 0.9rem;
+			line-height: 1.5rem;
+			margin-bottom: 1rem;
+		}
+	}
+}*/
