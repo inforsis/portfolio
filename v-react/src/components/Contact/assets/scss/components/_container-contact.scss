@@ -1,0 +1,9 @@
+@import 'assets/scss/settings/settings.scss';
+@import 'assets/scss/tools/tools.scss';
+
+.container-contact {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}

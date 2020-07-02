@@ -52,7 +52,7 @@ export default function Timeline() {
           //limpa os objetos e array
           events = {}
           event = []
-          //starta os valores 
+          //starta os novos valores 
           events.year = year
           events.eventos = event.push(obj[i].title.rendered)
         }  
