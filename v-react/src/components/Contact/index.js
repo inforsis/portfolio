@@ -45,17 +45,23 @@ export default function Contact() {
           <simplebar data-simplebar-auto-hide="false" className="main-content container-contact">
               
               <div id="contactBox" className="container-form">
-                {social.map((item,index) => (                
-                  <dl class="contact-pointers">
-                    <dt className="title" v-if="index === 0" dangeroulsySetInnerHTML={{__html:item.label}}></dt>
-                    
-                    <dd className="item"  v-if="index === 1" dangeroulsySetInnerHTML={{__html:item.title}}></dd>
-                    
-                    <dd class="item">
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" title={item.title} className="title">{item.label}</a>
-                    </dd>
-                  </dl>
-                ))}
+                {social.map((item,index) => {
+                  return (                
+                    <dl class="contact-pointers">
+                      {index === 0 ? 
+                        <dt className="title" dangerouslySetInnerHTML={{__html:item.label}}></dt>
+                      : null }
+                      {index === 1 ?
+                        <dd className="item" dangerouslySetInnerHTML={{__html:item.title}}></dd>
+                      : null }
+                      {index > 1 ?
+                        <dd class="item">
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" title={item.title} className="title">{item.label}</a>
+                        </dd>
+                      : null }
+                    </dl>
+                  )
+                })}
               </div>
 
           </simplebar>
