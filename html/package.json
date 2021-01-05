@@ -10,7 +10,7 @@
   "author": "Jadson Moreira <inforsis@gmail.com> (https://jadson.dev/)",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "countup.js": "^2.0.4",
     "jquery": "^3.4.1",
