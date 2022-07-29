@@ -1,52 +1,59 @@
 .statistics {
-	display: flex;
-	position: absolute;
-	bottom: 15px;
-	width: 90%;
-	margin: auto;
-	left: 0;
-	right: 0;
-	background-color: $primary-light-color;
-	justify-content: space-around;
-	>.item {
-		padding: 0 15px;
-		flex: 1;
-		.content {
-			background-color: $side-bg;
-			padding: 5px 0;
-		}
-		.icon,
-		.number,
-		.text {
-			display: block;
-			text-align: center;
-		}
-		.icon {
-			color: $primary-color;
-			font-size: 26px;
-		}
-		.number {
-			font-size: 18px;
-			color: $primary-dark-color;
-			font-family: $main-font-bold;
-			padding: 5px 0;
-			p {
-				display:inline;
-			}
-		}
-		.text {
-			font-size: 11px;
-			font-family: $main-font-regular;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-    		text-shadow: 0 0 5px rgba(0,0,0,0.1);	
-		}
-	}
+  display: flex;
+  position: absolute;
+  bottom: 15px;
+  width: 90%;
+  margin: auto;
+  left: 0;
+  right: 0;
+  background-color: $primary-light-color;
+  justify-content: space-around;
+  > .item {
+    padding: 0 15px;
+    flex: 1;
+    .content {
+      background-color: $side-bg;
+      padding: 5px 0;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      > .mdi {
+        font-size: 1.8rem;
+      }
+    }
+    .icon,
+    .number,
+    .text {
+      display: block;
+      text-align: center;
+    }
+    .icon {
+      color: $primary-color;
+      font-size: 26px;
+    }
+    .number {
+      font-size: 18px;
+      color: $primary-dark-color;
+      font-family: $main-font-bold;
+      padding: 5px 0;
+      p {
+        display: inline;
+      }
+    }
+    .text {
+      font-size: 11px;
+      font-family: $main-font-regular;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
 //mobile
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
-	.statistics {
-		display: none;
-	}
+  .statistics {
+    display: none;
+  }
 }

@@ -9,7 +9,7 @@ import Post from './components/post/Post'
 const router = new VueRouter({
   base: "/",
   linkActiveClass: 'active',
-  //mode: 'history',
+  mode: 'history',
   routes: [
     {
       path: '/',

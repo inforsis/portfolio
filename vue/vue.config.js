@@ -3,6 +3,5 @@ module.exports = {
     sourceMap: true,
     extract: {filename: 'css/main.css'}
   },
-
   publicPath: './'
 }
