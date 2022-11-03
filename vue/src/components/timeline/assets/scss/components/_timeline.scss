@@ -1,79 +1,127 @@
 .timeline {
-	max-width: 50%;
+  max-width: 50%;
 }
 .timeline-pagination {
-	padding: 0 max(50px, 3vw);
-	display: flex;
-	flex-direction: column;
-	.item {
-		padding: 15px 0 15px 15px;
-		color: $secundary-link-color;
-		position: relative;
-		border-left: 2px $secundary-link-color solid;
-		&:hover {
-			cursor:pointer;
-		}
-		>.bullet {
-			width: 10px;
-			height: 10px;
-			border-radius: 100%;
-			background-color: $secundary-link-color;
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: -6px;
-			margin: auto;
-			display: none;
-		}
-		>input[type="radio"] {
-			display: none;
-			&:checked {
-				+.bullet {
-					display:block;
-				}
-			}
-		}
-	}
+  padding: 0 max(50px, 3vw);
+  display: flex;
+  flex-direction: column;
+  .item {
+    padding: 15px 0 15px 15px;
+    color: $secundary-link-color;
+    position: relative;
+    border-left: 2px $secundary-link-color solid;
+    &:hover {
+      cursor: pointer;
+    }
+    > .year {
+      &:before {
+        content: attr(data-year-yyyy);
+      }
+    }
+    > .bullet {
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: $secundary-link-color;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -6px;
+      margin: auto;
+      display: none;
+    }
+    > input[type="radio"] {
+      display: none;
+      &:checked {
+        + .bullet {
+          display: block;
+        }
+      }
+    }
+  }
 }
 .timeline-information {
-	width: 420px;
-	//height: 180px;
-	height: auto;
-	max-height: 100%;
-	padding-left: 60px;
-	border-left: 2px $secundary-link-color solid;
-	text-align: right;
-	>.year {
-		font-size: 1.8rem;
-		font-family: $primary-font-light-ex-italic;
-		color:$secundary-link-color;
-		margin-bottom: 15px;
-	}
-	>.item {
-		line-height: max(1.4rem, 1.5vw);
-		font-size: max(0.9rem, 1vw);
-    	font-family: $primary-font-light-italic;
-    	margin-bottom: max(30px, 2vw);
-	}
+  width: 420px;
+  //height: 180px;
+  height: auto;
+  max-height: 100%;
+  padding-left: 60px;
+  border-left: 2px $secundary-link-color solid;
+  text-align: right;
+  > .year {
+    font-size: 1.8rem;
+    font-family: $primary-font-light-ex-italic;
+    color: $secundary-link-color;
+    margin-bottom: 15px;
+  }
+  > .item {
+    line-height: max(1.4rem, 1.5vw);
+    font-size: max(0.9rem, 1vw);
+    font-family: $primary-font-light-italic;
+    margin-bottom: max(30px, 2vw);
+    > .year {
+      &:before {
+        content: attr(data-year-yyyy);
+      }
+    }
+  }
 }
 
 //medium
 @media (min-width: $screen-min-md) and (max-width: $screen-max-md) {
-	.timeline-information {
-		padding-left: 30px;
-	}
+  .timeline-information {
+    padding-left: 30px;
+  }
 }
 
 //mobile
 @media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
-	.timeline {
-		display: none;
-	}
+  .timeline {
+    max-width: initial;
+    padding-top: 60px;
+    padding-bottom: 90px;
+    padding-left: 0;
+    flex-direction: column-reverse;
+    min-height: 30%;
+  }
+  .timeline-pagination {
+    padding: 0;
+    flex-direction: row;
+    .item {
+      border-left: none;
+      border-top: 2px solid $secundary-link-color;
+      padding-right: 10px;
+      padding-left: 10px;
+      > .bullet {
+        top: -100%;
+        bottom: 0;
+        left: calc(50% - 7px);
+      }
+      > .year {
+        &:before {
+          content: attr(data-year-yy);
+        }
+      }
+    }
+  }
+  .timeline-information {
+    border-left: none;
+    padding-left: 0;
+    text-align: left;
+    padding-left: 45px;
+    padding-right: 45px;
+    > .year {
+      display: none;
+    }
+    > .item {
+      margin-bottom: max(10px, 1vw);
+    }
+  }
 }
 
 //tablet
 @media (min-width: $screen-min-tablet) and (max-width: $screen-max-tablet) {
-	.timeline {
-		display: flex; 
-	}
+  .timeline {
+    display: flex;
+  }
 }

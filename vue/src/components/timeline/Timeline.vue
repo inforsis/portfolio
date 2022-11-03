@@ -13,7 +13,7 @@
           <input type="radio" v-if="(index === 0)" checked name="timeline" :value="index" autocomplete="off" v-on:change="changeTimeLine(index)">
           <input type="radio" v-else=""  name="timeline" :value="index" autocomplete="off" v-on:change="changeTimeLine(index)">
           <i class="bullet"></i>
-          <span>{{item.year}}</span>
+          <span class="year" :data-year-yyyy="item.year" :data-year-yy="String(item.year).substring(2,4)"></span>
         </label>
       </div>
 
@@ -69,7 +69,7 @@ export default {
             currentYear = year       
           }
           _this.event = _this.objEvents[0].events
-          _this.year = _this.objEvents[0].year
+          _this.year  = _this.objEvents[0].year
         })         
       },
       changeTimeLine: function(indexYear) {
