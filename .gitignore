@@ -1,9 +1,54 @@
-# See https://help.github.com/ignore-files/ for more about ignoring files.
+# ==========================
+# React
+# ==========================
 
-# dependencies
-*/node_modules
+/v-react/node_modules/
+/v-react/build/
 
-# misc
+# ==========================
+# WordPress Core
+# ==========================
+
+/wordpress/wp-admin/
+/wordpress/wp-includes/
+
+# Arquivos do core
+/wordpress/index.php
+/wordpress/license.txt
+/wordpress/readme.html
+/wordpress/wp-activate.php
+/wordpress/wp-blog-header.php
+/wordpress/wp-comments-post.php
+/wordpress/wp-cron.php
+/wordpress/wp-links-opml.php
+/wordpress/wp-load.php
+/wordpress/wp-login.php
+/wordpress/wp-mail.php
+/wordpress/wp-settings.php
+/wordpress/wp-signup.php
+/wordpress/wp-trackback.php
+/wordpress/xmlrpc.php
+
+# Configuração
+/wordpress/wp-config.php
+
+# Uploads
+/wordpress/wp-content/uploads/
+
+# Cache
+/wordpress/wp-content/cache/
+/wordpress/wp-content/litespeed/
+/wordpress/wp-content/w3tc-cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
 .DS_Store
+Thumbs.db
 
+# Logs
+
+*.log
 npm-debug.log*
