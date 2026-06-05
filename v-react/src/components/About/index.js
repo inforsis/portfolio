@@ -6,17 +6,13 @@ import './assets/scss/components/_about-resume.scss'
 
 import Timeline from '../Timeline'
 
-import simplebar from 'simplebar-react'
-import 'simplebar/dist/simplebar.min.css'
+// import simplebar from 'simplebar-react'
+// import 'simplebar/dist/simplebar.min.css'
 
 export default function About() {
   let [about,setAbout] = useState([])
 
   useEffect(() => {
-    aboutResume()
-  })
-
-  function aboutResume() {
     //document.getElementById('checkFunFacts').click()
     const URL = 'pages/9';
     api.get(URL)
@@ -30,7 +26,8 @@ export default function About() {
     .finally(function(){
       //document.getElementById('checkFunFacts').checked = false
     })
-  }
+  },[])
+
 
   return (
     <section id="about" className="page-section">
@@ -39,9 +36,9 @@ export default function About() {
 
         <div className="content">
             
-            <simplebar className="about-resume" data-simplebar-auto-hide="false">
+            <div className="about-resume" data-simplebar-auto-hide="false">
                 <div id="aboutResume" dangerouslySetInnerHTML={{__html:about[1]}}></div>
-            </simplebar>
+            </div>
 
             <Timeline/>
 

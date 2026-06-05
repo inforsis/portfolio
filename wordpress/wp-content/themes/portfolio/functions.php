@@ -348,4 +348,12 @@ add_action('rest_api_init', function () {
     $get_custom_field = new get_event;
 });
 
+add_action('init', function () {
+    if (isset($_GET['action']) && $_GET['action'] === 'register') {
+        wp_redirect(home_url()); // Redireciona para a página inicial
+        exit;
+    }
+});
+
+
 ?>

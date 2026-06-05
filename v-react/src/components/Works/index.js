@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 
 import api from '../../api'
-import Statistics from '../Statistics'
+// import Statistics from '../Statistics'
 
 import './assets/scss/components/_works.scss'
 
@@ -34,11 +34,11 @@ export default function Works() {
 
       <div className="content">
 
-          <simplebar className="works" data-simplebar-auto-hide="false">
+          <div className="works" data-simplebar-auto-hide="false">
               
               <div id="worksContent">
-                {objWorks.map((item) => (
-                  <div className="item">
+                {objWorks.map((item,i) => (
+                  <div className="item" key={'work-'+i}>
                     <div className="container">
                       <figure className="thumb">
                           <img className="web" src={item[5].thumbnail[0]} alt="portfolio thumbnail" />
@@ -49,8 +49,8 @@ export default function Works() {
                         <h3 className="title" dangerouslySetInnerHTML={{__html:item[1].title}}></h3>
                         <small className="description" dangerouslySetInnerHTML={{__html:item[2].description}}></small>
                         <ul className="listing">
-                          {item[4].tags.map((tag) => (
-                            <li class="item">{tag}</li>
+                          {item[4].tags.map((tag,index) => (
+                            <li className="item" key={index}>{tag}</li>
                           ))}
                         </ul>
                         <a href={item[3].link} target="_blank" rel="noopener noreferrer">{item[3].link}</a>
@@ -59,11 +59,9 @@ export default function Works() {
                   </div>
                 ))}
               </div>
-          </simplebar>
+          </div>
 
       </div>
-
-      <Statistics/>
 
     </section>
   )

@@ -14,10 +14,6 @@ export default function Post() {
     const { slug } = useParams()
 
     useEffect(() => {
-        getPost() 
-    },[])
-
-    function getPost() {
         //document.getElementById('checkFunFacts').click()
         let URL = 'posts?slug='+slug
         api.get(URL)
@@ -33,7 +29,8 @@ export default function Post() {
         .finally(function(){
             //document.getElementById('checkFunFacts').checked = false
         })
-    }
+    },[slug])
+
     return (
         <section id="post" className="page-section">
             
@@ -45,11 +42,11 @@ export default function Post() {
                 {date}
             </time>
 
-            <simplebar data-simplebar-auto-hide="false" className="content content-post">
+            <div data-simplebar-auto-hide="false" className="content content-post">
 
                 <div dangerouslySetInnerHTML={{__html:content}}></div>
         
-            </simplebar>
+            </div>
 
         </section>
     )

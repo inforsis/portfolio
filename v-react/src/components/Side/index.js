@@ -1,7 +1,6 @@
 import React from 'react'
 
 import Menu from './../Menu'
-import profilePic from './assets/img/jadson_moreira.webp'
 
 import './assets/scss/objects/_side.scss';
 import './assets/scss/components/_side.scss';
@@ -14,7 +13,7 @@ export default function Side() {
     <aside className="side">
       <figure className="profile-pic">
           <span className="pic-rounded">
-              <img src={profilePic} className="img" alt="foto perfil"/>                
+              <img src="https://www.gravatar.com/avatar/55febb08b922b32692b58a5b488b6816?s=150&d=mp" className="img" alt="foto perfil"/>                
           </span>
       </figure>
       <Menu/>

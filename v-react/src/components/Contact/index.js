@@ -42,12 +42,12 @@ export default function Contact() {
 
       <div className="content">
 
-          <simplebar data-simplebar-auto-hide="false" className="main-content container-contact">
+          <div data-simplebar-auto-hide="false" className="main-content container-contact">
               
               <div id="contactBox" className="container-form">
                 {social.map((item,index) => {
                   return (                
-                    <dl class="contact-pointers">
+                    <dl className="contact-pointers" key={'contact'+index}>
                       {index === 0 ? 
                         <dt className="title" dangerouslySetInnerHTML={{__html:item.label}}></dt>
                       : null }
@@ -55,7 +55,7 @@ export default function Contact() {
                         <dd className="item" dangerouslySetInnerHTML={{__html:item.title}}></dd>
                       : null }
                       {index > 1 ?
-                        <dd class="item">
+                        <dd className="item">
                           <a href={item.link} target="_blank" rel="noopener noreferrer" title={item.title} className="title">{item.label}</a>
                         </dd>
                       : null }
@@ -64,7 +64,7 @@ export default function Contact() {
                 })}
               </div>
 
-          </simplebar>
+          </div>
   
       </div>
 

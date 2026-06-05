@@ -48,6 +48,7 @@ export default function Timeline() {
           events.eventos = event
           events.id = i
           //adiciona o objeto de evento ao array principal
+          // eslint-disable-next-line no-loop-func
           setObjEvents(objEvents => [...objEvents,events])
           //limpa os objetos e array
           events = {}
@@ -74,8 +75,8 @@ export default function Timeline() {
         <dt className="year">
           <span dangerouslySetInnerHTML={{__html:year}}></span>
         </dt>
-        {eventos.map((item) => (
-          <dd className="item" dangerouslySetInnerHTML={{__html:eventos}}></dd>
+        {eventos.map((item,index) => (
+          <dd className="item" key={index}  dangerouslySetInnerHTML={{__html:item}}></dd>
         ))}
       </dl>
 
