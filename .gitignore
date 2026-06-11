@@ -53,3 +53,6 @@ Thumbs.db
 
 *.log
 npm-debug.log*
+
+# Scripts locais
+deploy*.sh
