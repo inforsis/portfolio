@@ -1,0 +1,45 @@
+{
+  "name": "portfolio-vite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "start": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "build:local": "tsc -b && VITE_BASE_PATH=/portfolio/vite/dist/ vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "lint": "eslint .",
+    "test": "vitest",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "material-design-icons": "^3.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.0.0",
+    "sass": "^1.83.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.0",
+    "vite": "^7.0.0",
+    "vitest": "^4.1.9"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

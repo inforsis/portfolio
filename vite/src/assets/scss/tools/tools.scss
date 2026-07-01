@@ -1,0 +1,14 @@
+//===========================================================================
+//	TOOLS
+//		Camada com mixins, funcoes, placeholders, etc:
+//				
+//			- mixins de font-face, até mixins de animações, placeholders, etc;
+//
+//			- importacao de fonts;
+//
+//			- nada é gerado diretamente como CSS final também.
+//=========================================================================== 
+
+//@use '_fonts.scss' as *;
+@forward '_functions.scss';
+@forward '_mixins.scss';

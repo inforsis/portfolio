@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Comunicolog - O campo da comunicação",
+    "description": "Front End development using react + wordpress  rest api.",
+    "link": "https://comunicolog.com.br/",
+    "tags": [
+      "css3",
+      "html5",
+      "javascript",
+      "layout",
+      "mafratech",
+      "php",
+      "react",
+      "wordpress"
+    ],
+    "thumbnail": {
+      "web": "uploads/portfolio/comunicolog_web.png",
+      "mobile": "uploads/portfolio/comunicolog_mobile.png",
+      "tablet": "uploads/portfolio/comunicolog_tablet.png"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Jornal Direitos - Jornalismo com credibilidade e qualidade",
+    "description": "Front End development, HTML, CSS responsive. Javascript, VUEJS and Wordpress integration.",
+    "link": "http://jornaldireitos.com/",
+    "tags": [
+      "css3",
+      "freelancer",
+      "html5",
+      "javascript",
+      "layout",
+      "php",
+      "vuejs",
+      "wordpress"
+    ],
+    "thumbnail": {
+      "web": "uploads/portfolio/direitos_web-1.png",
+      "mobile": "uploads/portfolio/direitos_mobile.png",
+      "tablet": "uploads/portfolio/direitos_tablet.png"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Lowndes Condomínios e Locações",
+    "description": "Front End development, HTML, CSS responsive. Javascript (jquery and ajax) and Wordpress integration.",
+    "link": "http://lowndes.com.br",
+    "tags": [
+      "css3",
+      "freelancer",
+      "html5",
+      "javascript",
+      "php",
+      "wordpress"
+    ],
+    "thumbnail": {
+      "web": "uploads/portfolio/lowndes_web.png",
+      "mobile": "uploads/portfolio/lowndes_mobile.png",
+      "tablet": "uploads/portfolio/lowndes_tablet.png"
+    }
+  },
+  {
+    "id": 4,
+    "title": "HELP Informnática - Serviços e suporte a informática",
+    "description": "Front End development, HTML, CSS responsive. Javascript (jquery and ajax) and Wordpress integration.",
+    "link": "http://helpinformaticarj.com.br",
+    "tags": [
+      "css3",
+      "freelancer",
+      "html5",
+      "javascript",
+      "layout",
+      "php",
+      "wordpress"
+    ],
+    "thumbnail": {
+      "web": "uploads/portfolio/helpinformatica_web.png",
+      "mobile": "uploads/portfolio/helpinformatica_mobile.png",
+      "tablet": "uploads/portfolio/helpinformatica_tablet.png"
+    }
+  },
+  {
+    "id": 5,
+    "title": "Culinária Brilhante",
+    "description": "Front End development, HTML, CSS responsive. Javascript (jquery and ajax) and Wordpress integration.",
+    "link": "http://culinariabrilhante.com",
+    "tags": [
+      "css3",
+      "freelancer",
+      "html5",
+      "javascript",
+      "php",
+      "wordpress"
+    ],
+    "thumbnail": {
+      "web": "uploads/portfolio/culinariabrilhante_web.png",
+      "mobile": "uploads/portfolio/culinariabrilhante_mobile.png",
+      "tablet": "uploads/portfolio/culinariabrilhante_tablet.png"
+    }
+  }
+]

@@ -1,0 +1,14 @@
+@use 'assets/scss/settings/settings.scss' as *;
+@use 'assets/scss/tools/tools.scss' as *;
+
+.main-container {	
+	flex-grow: 1;
+	overflow: hidden; 
+}
+
+//mobile
+@media (min-width: $screen-min-mobile) and (max-width: $screen-max-mobile) {
+	.main-container {
+		height: 100%;
+	}
+}
