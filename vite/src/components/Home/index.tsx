@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import api from '../../api'
 import type { PageContent } from '../../types/api'
+import { FunfactsIcon } from '../Funfacts'
 
 import './assets/scss/components/_page-home.scss'
 import './assets/scss/components/_cover-area.scss'
@@ -26,6 +27,7 @@ export default function Home() {
       <div id="coverArea" className="cover-area">
         <span dangerouslySetInnerHTML={{__html:coverHtml}}></span>
       </div>        
+      <FunfactsIcon />
     </section>
   )
 }

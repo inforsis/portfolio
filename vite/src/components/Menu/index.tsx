@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useLocation, useNavigate} from 'react-router-dom'
 
 import api from '../../api'
 import type { MenuPage } from '../../types/api'
+import { useFunfacts } from '../Funfacts'
 
 import './assets/scss/objects/_main-menu.scss'
 import './assets/scss/components/_main-menu.scss'
@@ -16,6 +17,9 @@ type MenuItem = {
 
 export default function Menu() {
   const [menu,setMenu] = useState<MenuItem[]>([])
+  const navigate = useNavigate()
+  const location = useLocation()
+  const { showFunfact } = useFunfacts()
 
   useEffect(() => {
     loadMenu()
@@ -60,10 +64,34 @@ export default function Menu() {
     })
   }
 
+  function navigateWithFunfact(event: React.MouseEvent<HTMLAnchorElement>, slug: string) {
+    if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) {
+      return
+    }
+
+    event.preventDefault()
+
+    if (location.pathname === slug || (location.pathname === '/' && slug === '/home')) {
+      return
+    }
+
+    showFunfact({
+      mode: 'transition',
+      afterRead: () => navigate(slug),
+    })
+  }
+
   return (
     <nav id="mainMenu" className="main-menu">
       {menu.map((item) => (
-        <Link key={item.id} to={item.slug} className="main-menu-item" id={item.title+"-menu"} data-title={item.title}>
+        <Link
+          key={item.id}
+          to={item.slug}
+          className="main-menu-item"
+          id={item.title+"-menu"}
+          data-title={item.title}
+          onClick={(event) => navigateWithFunfact(event, item.slug)}
+        >
           <i className="material-icons">{item.icon}</i>
         </Link>
       ))}

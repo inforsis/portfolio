@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Menu from './../Menu'
 
@@ -12,9 +13,9 @@ export default function Side() {
   return (
     <aside className="side">
       <figure className="profile-pic">
-          <span className="pic-rounded">
+          <Link to="/home" className="pic-rounded" aria-label="Go to home">
               <img src="https://www.gravatar.com/avatar/55febb08b922b32692b58a5b488b6816?s=150&d=mp" className="img" alt="foto perfil"/>                
-          </span>
+          </Link>
       </figure>
       <Menu/>
       <span className="credits">

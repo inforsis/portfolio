@@ -19,6 +19,7 @@ import Router from './router'
 // import api from './api' 
 
 import Side from './components/Side'
+import { FunfactsProvider } from './components/Funfacts'
 
 // import 'simplebar/dist/simplebar.min.css'
 
@@ -28,10 +29,12 @@ function App() {
   
   return (
     <BrowserRouter basename={routerBaseName}>
-      <Side/>
-      <main className="main-container animated">
-        <Router/>
-      </main>
+      <FunfactsProvider>
+        <Side/>
+        <main className="main-container animated">
+          <Router/>
+        </main>
+      </FunfactsProvider>
     </BrowserRouter> 
   );
 }
