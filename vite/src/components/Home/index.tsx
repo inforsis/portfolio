@@ -26,7 +26,8 @@ export default function Home() {
     <section id="home" className="page-section">            
       <div id="coverArea" className="cover-area">
         <span dangerouslySetInnerHTML={{__html:coverHtml}}></span>
-      </div>        
+      </div>
+      <img className="fred" src="/uploads/portfolio/fred.gif" alt="Fred" />
       <FunfactsIcon />
     </section>
   )
